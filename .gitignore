@@ -15,6 +15,7 @@
 *.pdb
 *.links
 *.gem*
+*.viminfo
 ############
 
 # Packages #
