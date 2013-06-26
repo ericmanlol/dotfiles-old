@@ -1,0 +1,165 @@
+
+Xft.dpi:        96
+Xft.hinting:    1
+Xft.hintstyle:  hintnone
+Xft.rgba:       rgb
+Xft.antialias:  true
+! terminal colors ------------------------------------------------------------
+
+! tangoesque scheme
+!*background: #111111
+!*foreground: #babdb6
+! Black (not tango) + DarkGrey
+!*color0:  #000000
+!*color8:  #555753
+! DarkRed + Red
+!*color1:  #ff6565
+!*color9:  #ff8d8d
+! DarkGreen + Green
+!*color2:  #93d44f
+!*color10: #c8e7a8
+! DarkYellow + Yellow
+!*color3:  #eab93d
+!*color11: #ffc123
+! DarkBlue + Blue
+!*color4:  #204a87
+!*color12: #3465a4
+! DarkMagenta + Magenta
+!*color5:  #ce5c00
+!*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+!*color6:  #89b6e2
+!*color14: #46a4ff
+! LightGrey + White
+!*color7:  #cccccc
+!*color15: #ffffff
+!end of tango-esque-------------
+
+
+!----------------duller
+! Black
+!*color0:   #151515
+!*color8:   #505450
+
+! Red
+!*color1:   #bf7979
+!*color9:   #f4a45f
+
+! Green
+!*color2:   #97b26b
+!*color10:  #c5f779
+
+! Yellow
+!*color3:   #cdcda1
+!*color11:  #ffffaf
+
+! Blue
+!*color4:   #4a5463
+!*color12:  #7d8794
+
+! Magneta
+!*color5:   #9c3885
+!*color13:  #e628ba
+
+! Cyan
+!*color6:   #88aadd
+!*color14:  #99ccff
+
+! White
+!*color7:   #ffffff
+!*color15:  #dedede
+! vim: et sw=2 syn=xdefaults
+!end of duller-------------
+
+!---------------------simple rainbow
+!! simple_rainbow
+*background:  #575757
+*foreground:  #dcdccc
+
+!black
+*color0:      #666666
+*color8:      #888888
+!red
+*color1:      #ff8278
+*color9:      #ff8278
+!green
+*color2:      #bde077
+*color10:     #bde077
+!yellow
+*color3:      #eadc84
+*color11:     #eadc84
+!blue
+*color4:      #77bee0
+*color12:     #77bee0
+!magenta
+*color5:      #dd91f3
+*color13:     #dd91f3
+!cyan
+*color6:      #ffc178
+*color14:     #ffc178
+!white
+*color7:      #dddddd
+*color15:     #cccccc
+!---------------------end simple rainbow
+
+
+
+
+
+
+! Xresources file
+
+URXvt*depth:    32
+URxvt*.transparent: true
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt*.shading: 15
+URxvt*background: Black
+URxvt*foreground: Gray
+URxvt*font: xft:dina:regular:size=14
+Urxvt*boldFont: xft:dina:regular:size=14
+!URxvt*boldfont: xft:dina:pixelsize=13
+
+!URxvt*font:               -*-dina-medium-r-normal-*-*-*-*-*-*-*-*-*
+!URxvt*boldFont:           -*-dina-bold-r-normal-*-*-*-*-*-*-*-*-*
+
+
+URxvt.scrollBar: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+
+URxvt.iso14755: false
+
+URxvt.iso14755_52: false
+
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+
+URxvt.perl-ext-common: default,clipboard,vtwheel,tabbedex
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    3
+URxvt.tabbed.tab-bg:    0
+
+
+
+
+! :Bind C-0, C-+ and C-= to activate small, medium, and big font size resp.     
+!URxvt.keysym.C-0: command:\033]710;-*-dina-medium-r-normal--13-*-*-*-*-*-*-*\007
+!URxvt.keysym.C-minus: command:\033]710;-*-dina-medium-r-normal--15-*-*-*-*-*-*-*\007
+!URxvt.keysym.C-equal: command:\033]710;-*-dina-medium-r-normal--16-*-*-*-*-*-*-*\007
+

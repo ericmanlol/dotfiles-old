@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/root/.config'
+let g:netrw_dirhist_2='/home/woo/.config/awesome'
+let g:netrw_dirhist_3='/www/bootstrap/css'
+let g:netrw_dirhist_4='/root/.vim'
+let g:netrw_dirhist_5='/home/woo/.config/awesome'
+let g:netrw_dirhist_6='/root/.config/sublime-text-2/Packages/SublimeREPL'
+let g:netrw_dirhist_7='/usr/share/licenses/fontconfig'

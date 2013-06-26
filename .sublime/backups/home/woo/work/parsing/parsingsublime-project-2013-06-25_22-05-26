@@ -1,0 +1,24 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"python",
+				"manage.py",
+				"runserver"
+			],
+			"name": "bitches",
+			"working_dir": "/home/woo/work/parsing"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "/home/woo/work/parsing"
+		},
+		{
+			"path": "/home/woo/.virtualenvs/ve_parsing"
+		}
+	]
+}
