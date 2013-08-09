@@ -21,7 +21,7 @@ function systitle(path) return systheme("/titlebar") .. path end
 theme = {}
 theme.wallpaper             = hometheme("/wp.jpg")
 theme.font                  = "dina 12"
-theme.menu_height           = 15
+theme.menu_height           = 30
 theme.menu_width            = 100
 -- }}}
 

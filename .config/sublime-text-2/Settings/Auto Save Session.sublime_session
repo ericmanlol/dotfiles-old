@@ -1,6 +1,7 @@
 {
 	"folder_history":
 	[
+		"/home/woo/work/javascriptstuff",
 		"/home/woo"
 	],
 	"last_window_id": 10,
@@ -216,36 +217,27 @@
 			"buffers":
 			[
 				{
+					"file": "/home/woo/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 588,
 						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "Python 2.7.5 (default, Jun 25 2013, 03:24:57) \n[GCC 4.8.1] on linux2\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n(InteractiveConsole)\n>>> ",
-					"settings":
-					{
-						"buffer_size": 165,
-						"line_ending": "Unix",
-						"name": "*REPL* [python]",
-						"scratch": true
 					}
 				}
 			],
 			"build_system": "Packages/Python/Python.sublime-build",
 			"command_palette":
 			{
-				"height": 208.0,
+				"height": 54.0,
 				"selected_items":
 				[
 					[
-						"ipython",
-						"SublimeREPL: Python - virtualenv"
-					],
-					[
 						"install",
 						"Package Control: Install Package"
+					],
+					[
+						"ipython",
+						"SublimeREPL: Python - virtualenv"
 					],
 					[
 						"python",
@@ -367,22 +359,29 @@
 					[
 						{
 							"buffer": 0,
+							"file": "/home/woo/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 							"settings":
 							{
-								"buffer_size": 0,
+								"buffer_size": 588,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										0,
-										0
+										350,
+										350
 									]
 								],
 								"settings":
 								{
 									"BracketHighlighterBusy": false,
+									"annotations":
+									[
+										"TODO",
+										"README",
+										"FIXME"
+									],
 									"bh_regions":
 									[
 										"bh_regex",
@@ -426,93 +425,93 @@
 										"bh_single_quote_open",
 										"bh_single_quote_close"
 									],
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						}
-					]
-				},
-				{
-					"selected": 0,
-					"sheets":
-					[
-						{
-							"buffer": 1,
-							"settings":
-							{
-								"buffer_size": 165,
-								"regions":
-								{
-								},
-								"selection":
-								[
+									"csslint_options":
+									{
+										"adjoining-classes": "warning",
+										"box-model": true,
+										"box-sizing": "warning",
+										"compatible-vendor-prefixes": "warning",
+										"display-property-grouping": true,
+										"duplicate-background-images": "warning",
+										"duplicate-properties": true,
+										"empty-rules": true,
+										"errors": true,
+										"fallback-colors": "warning",
+										"floats": "warning",
+										"font-faces": "warning",
+										"font-sizes": "warning",
+										"gradients": "warning",
+										"ids": "warning",
+										"import": "warning",
+										"important": "warning",
+										"known-properties": true,
+										"outline-none": "warning",
+										"overqualified-elements": "warning",
+										"qualified-headings": "warning",
+										"regex-selectors": "warning",
+										"rules-count": "warning",
+										"shorthand": "warning",
+										"star-property-hack": "warning",
+										"text-indent": "warning",
+										"underscore-property-hack": "warning",
+										"unique-headings": "warning",
+										"universal-selector": "warning",
+										"vendor-prefix": true,
+										"zero-units": "warning"
+									},
+									"gjslint_ignore":
 									[
-										165,
-										165
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"auto_complete": true,
-									"auto_indent": false,
-									"bh_regions":
-									[
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close"
+										110
 									],
-									"detect_indentation": false,
-									"gutter": false,
-									"history_arrows": true,
-									"indent_subsequent_lines": false,
-									"line_numbers": false,
-									"repl": true,
-									"repl_external_id": "python",
-									"repl_id": "8a1fc45e7cd742549b9f4d2841e25868",
-									"smart_indent": false,
-									"syntax": "Packages/Python/Python.tmLanguage",
+									"gjslint_options":
+									[
+									],
+									"incomplete_sync": null,
+									"javascript_linter": "jshint",
+									"jshint_options":
+									{
+										"browser": true,
+										"evil": true,
+										"regexdash": true,
+										"sub": true,
+										"trailing": true,
+										"wsh": true
+									},
+									"pep8": true,
+									"pep8_ignore":
+									[
+										"E501"
+									],
+									"perl_linter": "perlcritic",
+									"pyflakes_ignore":
+									[
+									],
+									"pyflakes_ignore_import_*": true,
+									"remote_loading": false,
+									"sublimelinter": true,
+									"sublimelinter_delay": 2,
+									"sublimelinter_disable":
+									[
+									],
+									"sublimelinter_executable_map":
+									{
+									},
+									"sublimelinter_fill_outlines": false,
+									"sublimelinter_gutter_marks": true,
+									"sublimelinter_gutter_marks_theme": "simple",
+									"sublimelinter_mark_style": "none",
+									"sublimelinter_notes": false,
+									"sublimelinter_objj_check_ascii": false,
+									"sublimelinter_popup_errors_on_save": false,
+									"sublimelinter_syntax_map":
+									{
+										"C++": "c",
+										"Python Django": "python",
+										"Ruby on Rails": "ruby"
+									},
+									"sublimelinter_wrap_find": true,
+									"synced": false,
+									"syntax": "Packages/JavaScript/JSON.tmLanguage",
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
@@ -541,12 +540,6 @@
 						0,
 						1,
 						1
-					],
-					[
-						0,
-						1,
-						1,
-						2
 					]
 				],
 				"cols":
@@ -557,7 +550,6 @@
 				"rows":
 				[
 					0.0,
-					0.662037037037,
 					1.0
 				]
 			},
@@ -570,7 +562,11 @@
 			{
 				"height": 138.0
 			},
-			"position": "0,0,0,0,0,1280,24,2558,718,2560,1440",
+			"output.sftp":
+			{
+				"height": 0.0
+			},
+			"position": "0,0,0,0,0,0,24,2558,934,2560,1440",
 			"replace":
 			{
 				"height": 0.0
@@ -603,13 +599,16 @@
 			"side_bar_width": 230.0,
 			"status_bar_visible": true,
 			"window_id": 4,
-			"workspace_name": "/home/woo/work/parsing/parsingsublime-project"
+			"workspace_name": "/home/woo/work/datvif.com/datvif.sublime-project"
 		}
 	],
 	"workspaces":
 	{
 		"recent_workspaces":
 		[
+			"/home/woo/work/datvif.com/datvif.sublime-project",
+			"/home/woo/work/datvif.com/untitled.sublime-project",
+			"/home/woo/work/javascriptstuff/jsstuff.sublime-project",
 			"/home/woo/work/parsing/parsingsublime-project",
 			"/home/woo/work/django/mes.sublime-project"
 		]

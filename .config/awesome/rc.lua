@@ -15,7 +15,6 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious = require("vicious")
 local wi = require("wi")
-require("scratch")
 
 -- {{{ Error handling
 -- Startup
@@ -82,10 +81,11 @@ local layouts = {
 naughty.config.defaults.timeout = 5
 naughty.config.defaults.screen = 1
 naughty.config.defaults.position = "top_right"
-naughty.config.defaults.margin = 26
+naughty.config.defaults.margin = 8
 naughty.config.defaults.gap = 1
 naughty.config.defaults.ontop = true
 naughty.config.defaults.font = "Lat2-dina-fonts16"
+--naughty.config.defaults.font = "Monaco 18"
 naughty.config.defaults.icon = nil
 naughty.config.defaults.icon_size = 256
 naughty.config.defaults.fg = beautiful.fg_tooltip
@@ -221,7 +221,8 @@ for s = 1, screen.count() do
     awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
 
   -- Wibox
-  mywibox[s] = awful.wibox({ position = "top", ontop = true, height = 24, screen = s })
+  mywibox[s] = awful.wibox({ position = "top", ontop = true,  height = 24, screen = s })
+--  mywibox[s] = awful.wibox({ position = "top", height = 16, screen = s })
 
   local left_wibox = wibox.layout.fixed.horizontal()
   left_wibox:add(mytaglist[s])
@@ -233,8 +234,8 @@ for s = 1, screen.count() do
   local right_wibox = wibox.layout.fixed.horizontal()
   right_wibox:add(space)
   if s == 1 then right_wibox:add(wibox.widget.systray()) end
-  right_wibox:add(mpdicon)
-  right_wibox:add(mpdwidget)
+--  right_wibox:add(mpdicon)
+--  right_wibox:add(mpdwidget)
   right_wibox:add(pacicon)
   right_wibox:add(pacwidget)
   right_wibox:add(baticon)
@@ -251,13 +252,13 @@ for s = 1, screen.count() do
   mywibox[s]:set_widget(wibox_layout)
 
   -- Graphbox
-  mygraphbox[s] = awful.wibox({ position = "bottom", height = 24, screen = s })
+  mygraphbox[s] = awful.wibox({ position = "bottom", height = 12, screen = s })
 
   local left_graphbox = wibox.layout.fixed.horizontal()
   left_graphbox:add(mylauncher)
   left_graphbox:add(space)
   left_graphbox:add(cpufreq)
---  left_graphbox:add(cpu)
+  left_graphbox:add(cpugraph0)
   left_graphbox:add(cpupct0)
   left_graphbox:add(cpugraph1)
   left_graphbox:add(cpupct1)
@@ -329,17 +330,10 @@ globalkeys = awful.util.table.join(
   awful.key({ modkey, }, "Return", function() awful.util.spawn(terminal) end),
   awful.key({ modkey, "Control" }, "r", awesome.restart),
   awful.key({ modkey, "Shift" }, "q", awesome.quit),
-  awful.key({ modkey, }, "l", function() awful.tag.incmwfact( 0.05) end),
-  awful.key({ modkey, }, "h", function() awful.tag.incmwfact(-0.05) end),
-  awful.key({ modkey, }, "k", function() awful.client.incwfact( 0.03) end),
-  awful.key({ modkey, }, "j", function() awful.client.incwfact(-0.03) end),
-
   awful.key({ altkey, }, "l", function() awful.tag.incmwfact( 0.05) end),
   awful.key({ altkey, }, "h", function() awful.tag.incmwfact(-0.05) end),
   awful.key({ altkey, }, "k", function() awful.client.incwfact( 0.03) end),
   awful.key({ altkey, }, "j", function() awful.client.incwfact(-0.03) end),
- 
-
   awful.key({ modkey, "Shift" }, "h", function() awful.tag.incnmaster( 1) end),
   awful.key({ modkey, "Shift" }, "l", function() awful.tag.incnmaster(-1) end),
   awful.key({ modkey, "Control" }, "h", function() awful.tag.incncol( 1) end),
@@ -351,7 +345,7 @@ globalkeys = awful.util.table.join(
   -- Scratch
   awful.key({ modkey }, "`",
     function()
-      scratch.drop("xfce4-terminal -name scratch", "bottom", "center", 1.0, 0.40, false)
+      scratch.drop("urxvtc -name scratch", "bottom", "center", 1.0, 0.40, false)
     end),
 
   -- Thunderbird
@@ -453,10 +447,10 @@ clientkeys = awful.util.table.join(
     function(c)
       c.maximized_horizontal = not c.maximized_horizontal
       c.maximized_vertical = not c.maximized_vertical
-    end))
+    end),
 
   -- Scratchify
-  --awful.key({ modkey, }, "v", function(c) scratch.pad.set(c, 0.50, 0.50, true) end))
+  awful.key({ modkey, }, "v", function(c) scratch.pad.set(c, 0.50, 0.50, true) end))
 -- }}}
 
 keynumber = 0

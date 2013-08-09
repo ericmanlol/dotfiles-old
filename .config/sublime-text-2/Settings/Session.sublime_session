@@ -228,7 +228,7 @@
 					],
 					[
 						"ipython",
-						"SublimeREPL: Python - IPython"
+						"SublimeREPL: Python - virtualenv"
 					],
 					[
 						"python",
@@ -288,6 +288,7 @@
 			},
 			"file_history":
 			[
+				"/home/woo/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/woo/work/parsing/parsingsublime-project",
 				"/home/woo/work/django/mes.sublime-project",
 				"/home/woo/.config/sublime-text-2/Packages/Automatic Backups/Automatic Backups.sublime-settings",
@@ -302,7 +303,6 @@
 				"/home/woo/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 				"/home/woo/.config/sublime-text-2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
 				"/home/woo/derp2.py",
-				"/home/woo/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/woo/Downloads/Sublime Text 2.0.1 x64.tar.bz2",
 				"/home/woo/.config/sublime-text-2/Packages/User/Package Control.sublime-settings",
 				"/home/woo/flask/flask/app.py"
@@ -401,7 +401,7 @@
 			{
 				"height": 138.0
 			},
-			"position": "0,0,0,0,0,1280,24,2558,718,2560,1440",
+			"position": "0,0,0,0,0,0,24,2558,934,2560,1440",
 			"replace":
 			{
 				"height": 0.0
