@@ -70,6 +70,7 @@ alias aws='ssh woo@notgoing.in'
 alias rld='source ~/.bashrc'
 alias shifty='ssh woo@shifty.notgoing.in'
 alias apx='ssh root@dev.notgoing.in'
+alias zep='ssh woo@zeppo.li'
 
 alias src='source ~/.bashrc'
 export TERM=xterm
