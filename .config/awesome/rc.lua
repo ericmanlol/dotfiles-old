@@ -4,7 +4,7 @@
 --      <tdy@gmx.com>      --
 --    ^originally by^      --
 -- vbroken and maimed byv  --
---  lol.ericman@gmail.com  --
+--       ericmanlol        --
 -----------------------------
 
 local gears = require("gears")
