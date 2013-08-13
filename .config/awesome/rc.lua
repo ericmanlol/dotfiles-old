@@ -2,8 +2,8 @@
 -- AwesomeWM configuration --
 --       version 3.5       --
 --      <tdy@gmx.com>      --
---    ^originall by        --
---  broken and maimed by   --
+--    ^originally by^      --
+-- vbroken and maimed byv  --
 --  lol.ericman@gmail.com  --
 -----------------------------
 
