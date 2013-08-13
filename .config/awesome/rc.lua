@@ -2,6 +2,9 @@
 -- AwesomeWM configuration --
 --       version 3.5       --
 --      <tdy@gmx.com>      --
+--    ^originall by        --
+--  broken and maimed by   --
+--  lol.ericman@gmail.com  --
 -----------------------------
 
 local gears = require("gears")
