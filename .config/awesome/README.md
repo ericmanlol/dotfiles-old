@@ -7,19 +7,6 @@ AwesomeWM
 
 <table width="100%">
   <tr>
-    <th><a href="https://github.com/tdy/dots/tree/v3.4.14">v3.4.14</a> from 2010 (Arch Linux Desktop)</th>
-    <th>v3.5+ from 2013 (Arch Linux Laptop)</th></tr>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/tdy/dots/raw/master/screenshots/awesome_20100113_1680x1050.png">
-        <img src="../../screenshots/awesome_20100113_1680x1050.png" width="100%" alt="Arch Linux Desktop (2010)" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://github.com/tdy/dots/raw/master/screenshots/awesome_20130301_2880x1800.png">
-        <img src="../../screenshots/awesome_20130301_2880x1800.png" width="100%" alt="Arch Linux rMBP 15" (2013)" />
-      </a>
-    </td>
-  </tr>
+        <img src="http://24.media.tumblr.com/9b81245f4d399a9a49b4be71fd5844f1/tumblr_mqpj5e2wMD1sd5swlo1_1280.png">   
   <tr><th colspan="2"><a href="../../screenshots">and more...</a></th></tr>
 </table>
