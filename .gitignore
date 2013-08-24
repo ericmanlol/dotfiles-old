@@ -16,7 +16,7 @@
 *.links
 *.gem*
 *.viminfo
-*vboxclient*
+.vboxclient*
 ############
 
 # Packages #
