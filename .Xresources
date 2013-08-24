@@ -166,4 +166,4 @@ URxvt.keysym.Control-Right:  \033[1;5C
 !URxvt.keysym.C-0: command:\033]710;-*-dina-medium-r-normal--13-*-*-*-*-*-*-*\007
 !URxvt.keysym.C-minus: command:\033]710;-*-dina-medium-r-normal--15-*-*-*-*-*-*-*\007
 !URxvt.keysym.C-equal: command:\033]710;-*-dina-medium-r-normal--16-*-*-*-*-*-*-*\007
-
+!Warning: Enabling this, broke my emacs bindings for CLI, FYI.
