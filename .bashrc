@@ -25,7 +25,6 @@ else
     root="${red}"
 fi
 
-#PS1="\[\e[0;37m\]┌─[${root}\u\[\e[0;37m\]][\[\e[0;96m\]\h\[\e[0;37m\]][\[\e[0;35m\]\w\[\e[0;37m\]]\n\[\e[0;37m\]└──╼ \[\e[0m\]"
 #PS1='\n\[\e[30;1m\]┌─[\[\e[0m\]\[\e[34;1m\]\u@\h\[\e[0m\]\[\e[30;1m\]]──[\[\e[0m\]\[\e[37;1m\]\w\[\[\e[0m\]\[\e[30;1m\]]\[\[\e[0m\]\n\[\e[30;1m\]└─[\[\e[0m\]\[\e[34;2m\]\D{%d %b} \[\e[30;1m\]■\[\e[0m\] \[\e[34;2m\]\A\[\e[0m\]\[\e[30;1m\]]──■\[\[\e[0m\] '
 
 export PS1='\[\033[0;35m\]┌┼─┼─ \[\033[0m\033[0;35m\]\u\[\033[0m\] @ \[\033[0;33m\]\h\[\033[0m\033[0;35m\] ─┤├─ \[\033[0m\]\t \d\[\033[0;35m\] ─┤├─ \[\033[0;33m\]\w\[\033[0;35m\] ─┤ \n\[\033[0;35m\]└┼─\[\033[0m\033[0;35m\]\$\[\033[0m\033[0;35m\]─┤▶\[\033[0m\] ✭ '
@@ -66,13 +65,11 @@ echo "'$1' is not a valid file!"
 shopt -s histappend
 export PROMPT_COMMAND='history -a' 
 
-alias aws='ssh woo@notgoing.in'
-alias rld='source ~/.bashrc'
-alias shifty='ssh woo@shifty.notgoing.in'
-alias apx='ssh root@dev.notgoing.in'
-alias zep='ssh woo@zeppo.li'
 
 alias src='source ~/.bashrc'
 export TERM=xterm
 
-alias pwd='echo you are here'
+
+#going to switch my ssh aliases to rely on custom host file that i'll pull from a server via restful api
+
+
