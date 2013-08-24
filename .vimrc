@@ -66,7 +66,7 @@ set nocompatible
 
 set t_Co=256
 
-colorscheme lucius
+colorscheme Tomorrow-Night
 
 nnoremap <silent> <F4> :TlistToggle<CR>
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
