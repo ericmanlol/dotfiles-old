@@ -38,7 +38,8 @@ set smarttab
 set backspace=indent,eol,start
 set incsearch
 set smartindent
-
+set cc=80
+set textwidth=80
 set hlsearch
 
 set ignorecase
