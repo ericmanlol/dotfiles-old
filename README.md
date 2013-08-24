@@ -8,7 +8,11 @@ backgrounded daemon.
 
 
 8/24/2013
-note: I have tabs on my urxvt256 terminals spawned via: <shift> + <down>
+    <shift>+<down>  --> spawns new urxvt tab
+    <shift>+<up>    --> renames infocus tab
+    <shift>+<left>  --> goto left tab
+    <shift>+<right> --> goto right tab
+
 
 
 
