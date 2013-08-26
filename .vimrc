@@ -12,6 +12,8 @@ Bundle 'klen/python-mode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'JimiSmith/vim-taglist'
+
 
 "end bundle install list
 
@@ -20,6 +22,7 @@ filetype plugin indent on
 augroup vimrc_autocmds
     autocmd!
     " highlight characters past column 120
+    " yeah 80 is cool and old school, but.....modern monitors
     autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python match Excess /\%120v.*/
     autocmd FileType python set nowrap
