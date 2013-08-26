@@ -1,6 +1,8 @@
 ![ss](http://i.imgur.com/XqEetQq.png)
 
-Todo: finish adding dependency list
+Todo: 
+- make a dependency list for quick install
+- integrate taglist-y system to vim that has tags by SCOPE, christ.
 
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
