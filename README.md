@@ -32,6 +32,17 @@ externals = {
 5.) $dotfiles --sync
 
 6.) fin
+```
+
+```
+For my ViM plugins you want to have Vundle installed ala:
+1.)$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+2.)$ vim ~/.vimrc
+
+3.)from vim command-mode :BundleInstall
+
+4.)The previous step will install all my bundled vim plugins/colors and such
 
 Some notes, in case anyone decides to clone:
 -urxvt
