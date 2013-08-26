@@ -18,7 +18,7 @@ https://pypi.python.org/packages/source/d/dotfiles/dotfiles-0.6.0.tar.gz
 
 2.) cd ~ && git clone github.com/ericmanlol/dotfiles.git
 
-3.) mkdir -p ~/.dotfilesrc
+3.) vim  ~/.dotfilesrc
 
 4.) drop this inside .dotfilesrc:
 [dotfiles]
