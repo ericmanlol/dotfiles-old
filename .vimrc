@@ -11,6 +11,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 "end bundle install list
