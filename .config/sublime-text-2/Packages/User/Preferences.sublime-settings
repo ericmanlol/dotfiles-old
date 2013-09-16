@@ -19,6 +19,11 @@
 	"ignored_packages":
 	[
 	],
+	"rulesrs":
+	[
+		72,
+		79
+	],
 	"soda_classic_tabs": true,
 	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
