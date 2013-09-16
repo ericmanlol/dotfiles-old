@@ -3,7 +3,10 @@
 Todo: 
 - make a dependency list for quick install
 - integrate taglist-y system to vim that has tags by SCOPE, christ.
-
+- emacs bash key bindings (ctrl+right arrow | ctrl + left arrow) I believe 
+were overwritten by my adventures in urxvt perl extension land.
+- copy/paste works fine but I'd like to have a right click menu dammit. 
+    - look for elusive urxvt right click menu or make one myself.
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
