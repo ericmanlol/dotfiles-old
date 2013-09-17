@@ -62,6 +62,17 @@ echo "'$1' is not a valid file!"
 }
 
 
+#backup function
+bak () 
+{ 
+cp $1 ${1}-`date +%Y%m%d%H%M`.BAK ;
+}
+
+
+
+
+
+
 shopt -s histappend
 export PROMPT_COMMAND='history -a' 
 
