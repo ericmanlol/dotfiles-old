@@ -36,7 +36,6 @@ local capi = {
 -- Scratchdrop: drop-down applications manager for the awesome window manager
 local drop = {} -- module scratch.drop
 
-
 local dropdown = {}
 
 -- Create a new window for the drop-down application when it doesn't
@@ -76,16 +75,16 @@ function toggle(prog, vert, horiz, width, height, sticky, screen)
             -- Client geometry and placement
             local screengeom = capi.screen[screen].workarea
 
-            if width  <= 1 then width  = screengeom.width  * width  end
+            if width  <= 1 then width  = (screengeom.width  * width) - 3 end
             if height <= 1 then height = screengeom.height * height end
 
             if     horiz == "left"  then x = screengeom.x
             elseif horiz == "right" then x = screengeom.width - width
-            else   x =  screengeom.x+(screengeom.width-width)/2 end
+            else   x =  screengeom.x+(screengeom.width-width)/2 - 1 end
 
             if     vert == "bottom" then y = screengeom.height + screengeom.y - height
             elseif vert == "center" then y = screengeom.y+(screengeom.height-height)/2
-            else   y =  screengeom.y - screengeom.y end
+            else   y =  screengeom.y end
 
             -- Client properties
             c:geometry({ x = x, y = y, width = width, height = height })
@@ -102,7 +101,7 @@ function toggle(prog, vert, horiz, width, height, sticky, screen)
 
         -- Add manage signal and spawn the program
         attach_signal("manage", spawnw)
-        awful.util.spawn(prog, false)
+        awful.util.spawn_with_shell(prog, false) -- original without '_with_shell'
     else
         -- Get a running client
         c = dropdown[prog][screen]
