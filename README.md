@@ -4,7 +4,8 @@ New Setup (About 40% done)
     - Add completely re-vamped vim.
     - Migration from bash to zsh.
     - Migration from screen to tmux.
-Screen:
+
+Screen Shot:
 ![ss](http://i.imgur.com/3QPJM7J.jpg)
 
 
