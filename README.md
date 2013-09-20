@@ -1,4 +1,11 @@
+As of 9-18-2013
+OLD SETUP:
 ![ss](http://i.imgur.com/XqEetQq.png)
+
+As of 9-19-2013
+New Setup:
+![ss](http://i.imgur.com/3QPJM7J.jpg)
+
 
 Todo: 
 - make a dependency list for quick install
