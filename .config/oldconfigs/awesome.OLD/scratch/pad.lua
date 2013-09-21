@@ -35,6 +35,7 @@ local capi = {
 -- Scratchpad: basic scratchpad manager for the awesome window manager
 local pad = {} -- module scratch.pad
 
+
 local scratchpad = {}
 
 -- Toggle a set of properties on a client.

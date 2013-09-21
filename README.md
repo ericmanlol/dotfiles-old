@@ -1,4 +1,19 @@
+As of 9-19-2013
+New Setup (About 40% done)
+- Mad Scientist Plans left:
+    - Add completely re-vamped vim.
+    - Migration from bash to zsh.
+    - Migration from screen to tmux.
+
+Screen Shot:
+![ss](http://i.imgur.com/3QPJM7J.jpg)
+
+
+As of 9-18-2013
+OLD SETUP:
 ![ss](http://i.imgur.com/XqEetQq.png)
+
+
 
 Todo: 
 - make a dependency list for quick install

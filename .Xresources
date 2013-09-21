@@ -115,9 +115,19 @@ URxvt*.transparent: true
 URxvt*.shading: 15
 URxvt*background: Black
 URxvt*foreground: Gray
-URxvt*font: xft:dina:regular:size=14
-Urxvt*boldFont: xft:dina:regular:size=14
+!URxvt*font: xft:dina:regular:size=14
+!Urxvt*boldFont: xft:dina:regular:size=14
 !URxvt*boldfont: xft:dina:pixelsize=13
+
+
+!URxvt.font: xft:Terminus:pixelsize=14:antialias=false:hinting=false, xft: Terminus (TTF) for Powerline:pixelsize=14:antialias=false:hinting=false:autohint=false
+!URxvt.boldFont: xft:Terminus:bold:pixelsize=14:antialias=false:hinting=false, xft: Terminus (TTF) for Powerline:bold:pixelsize=14:antialias=false:hinting=false:autohint=false
+
+
+URxvt.font: xft:Terminess Powerline:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminess Powerline:pixelsize=16:antialias=false:hinting=false:autohint=false
+ 
+URxvt.boldFont: xft:Terminess Powerline:bold:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminess Powerline:bold:pixelsize=16:antialias=false:hinting=false:autohint=false
+
 
 !URxvt*font:               -*-dina-medium-r-normal-*-*-*-*-*-*-*-*-*
 !URxvt*boldFont:           -*-dina-bold-r-normal-*-*-*-*-*-*-*-*-*
