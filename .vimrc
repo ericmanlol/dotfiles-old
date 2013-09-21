@@ -231,6 +231,8 @@ nnoremap <silent> <Leader>2 :TagbarToggle<cr>
 " <Leader>tab: Toggles NERDTree
 nnoremap <silent> <Leader><tab> :NERDTreeToggle<cr>
 
+" <Leader>,: Switch to previous split
+nnoremap <Leader>, <C-w>p
 
 
 "===============================================================================
