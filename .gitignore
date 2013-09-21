@@ -17,6 +17,7 @@
 *.gem*
 *.viminfo
 .vboxclient*
+.java
 ############
 
 # Packages #
