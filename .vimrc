@@ -90,6 +90,18 @@ NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " NeoBundle 'xolox/vim-easytags'
 NeoBundle 'majutsushi/tagbar'
 
+"misc
+NeoBundle 'kana/vim-submode'
+NeoBundle 'kana/vim-scratch'
+NeoBundle 'vim-scripts/BufOnly.vim'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 't9md/vim-quickhl'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'koron/nyancat-vim'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'ton/vim-bufsurf'
+
 
 "bundle install list
 "Bundle 'tpope/vim-fugitive'
