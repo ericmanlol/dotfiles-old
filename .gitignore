@@ -18,6 +18,9 @@
 *.viminfo
 .vboxclient*
 .java
+.vim/*
+.config/awesome-*
+.config/sublime-text2/Backup/*
 ############
 
 # Packages #
