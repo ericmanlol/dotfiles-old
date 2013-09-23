@@ -158,12 +158,13 @@ URxvt.iso14755_52: false
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
 
-URxvt.perl-ext-common: default,clipboard,vtwheel,tabbedex
+!URxvt.perl-ext-common: default,clipboard,vtwheel,tabbedex
+URxvt.perl-ext-common: default,clipboard,vtwheel
 
-URxvt.tabbed.tabbar-fg: 2
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    3
-URxvt.tabbed.tab-bg:    0
+!URxvt.tabbed.tabbar-fg: 2
+!URxvt.tabbed.tabbar-bg: 0
+!URxvt.tabbed.tab-fg:    3
+!URxvt.tabbed.tab-bg:    0
 
 !hopefully fixes ctrl+arrows, damn you tabbedex
 URxvt.keysym.Control-Up:     \033[1;5A

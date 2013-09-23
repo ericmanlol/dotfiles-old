@@ -55,11 +55,42 @@ ZSH_THEME="woo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
+
+
 HISTSIZE=10000
+
+
+# extract function
+extract() {
+  if [[ -f $1 ]]; then
+case $1 in
+      *.7z) 7z x $1;;
+      *.bz2) bunzip2 $1;;
+      *.gz) gunzip $1;;
+      *.rar) unrar x $1;;
+      *.tar) tar xvf $1;;
+      *.tar.bz2) tar xvjf $1;;
+      *.tar.gz) tar xvzf $1;;
+      *.tbz2) tar xvjf $1;;
+      *.tgz) tar xvzf $1;;
+      *.zip) unzip $1;;
+      *.Z) uncompress $1;;
+      *) echo "unable to extract '$1'..." ;;
+    esac
+else
+echo "'$1' is not a valid file!"
+  fi  
+}
+
+
+alias src='source ~/.zshrc'
 
