@@ -20,7 +20,9 @@
 .java
 .vim/*
 .config/awesome-*
+.config/awesome/awesome-*
 .config/sublime-text2/Backup/*
+.config/chromium*
 ############
 
 # Packages #
