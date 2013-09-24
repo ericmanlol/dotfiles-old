@@ -37,7 +37,6 @@ https://pypi.python.org/packages/source/d/dotfiles/dotfiles-0.6.0.tar.gz
 ```
 
 2.  Clone my repo
-
 ``` 
 cd ~ && git clone github.com/ericmanlol/dotfiles.git
 ```
@@ -60,9 +59,12 @@ externals = {
     '.uml':         '/tmp'}
 ```
 5.  Sync it up!  
-```$dotfiles --sync```
+```
+$dotfiles --sync
+```
 
 6.  Fin.
+
 
 
 For my ViM plugins you want to have NeoBundle installed ala:
