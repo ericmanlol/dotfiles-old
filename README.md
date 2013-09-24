@@ -1,10 +1,11 @@
 As of 9-19-2013
 New Setup (About 40% done)
-- Mad Scientist Plans left:
-    - Add completely re-vamped vim.
-    - Migration from bash to zsh.
-    - Migration from screen to tmux.
-
+- Mad Scientist Plans:
+[x] Re-do wm config
+[x] Add completely re-vamped vim.
+[x] Migration from screen to tmux.
+[] Migration from bash to zsh.
+    - currently using zsh as secondary shell on shift+mod+enter via tmux
 Screen Shot:
 ![ss](http://i.imgur.com/3QPJM7J.jpg)
 
@@ -23,19 +24,30 @@ were overwritten by my adventures in urxvt perl extension land.
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
 
-```
+
 How to use?
-1.)Install dotfiles
+1.  Install dotfiles
+```
 $pip install dotfiles
-or
-from src:
+```
+or from src:
+```
 https://pypi.python.org/packages/source/d/dotfiles/dotfiles-0.6.0.tar.gz
+```
 
-2.) cd ~ && git clone github.com/ericmanlol/dotfiles.git
+2.  Clone my repo
 
-3.) vim  ~/.dotfilesrc
+``` 
+cd ~ && git clone github.com/ericmanlol/dotfiles.git
+```
 
-4.) drop this inside .dotfilesrc:
+3.  Open up runtime config file
+```
+vim  ~/.dotfilesrc
+```
+
+4.  Drop this inside .dotfilesrc:
+```
 [dotfiles]
 repository = ~/dotfiles
 ignore = [
@@ -45,11 +57,12 @@ ignore = [
 externals = {
     '.bzr.log':     '/dev/null',
     '.uml':         '/tmp'}
-
-5.) $dotfiles --sync
-
-6.) fin
 ```
+5.  Sync it up!  
+```$dotfiles --sync```
+
+6.  Fin.
+
 
 For my ViM plugins you want to have NeoBundle installed ala:
 ```
