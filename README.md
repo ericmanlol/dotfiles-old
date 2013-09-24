@@ -52,18 +52,18 @@ externals = {
 ```
 
 For my ViM plugins you want to have NeoBundle installed ala:
-1.)
 ```
  $ mkdir -p ~/.vim/bundle
  $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
-2.)
 ```
 $ vim ~/.vimrc
 ```
-3.)from vim command-mode :BundleInstall
+from vim command-mode
+``` :NeoBundleInstall
+```
 
-4.)The previous step will install all my bundled vim plugins/colors and such
+The previous step will install all my bundled vim plugins/colors and such
 
 
 Some notes, in case anyone decides to clone:
