@@ -9,6 +9,9 @@ Screen Shot:
 ![ss](http://i.imgur.com/3QPJM7J.jpg)
 
 
+#As of 9-18-2013
+#OLD SETUP:
+#![ss](http://i.imgur.com/XqEetQq.png)
 
 
 
@@ -51,33 +54,28 @@ externals = {
 6.) fin
 ```
 
-For my ViM plugins you want to have NeoBundle installed ala:
-1.)
 ```
- $ mkdir -p ~/.vim/bundle
- $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-```
-2.)
-```
-$ vim ~/.vimrc
-```
+For my ViM plugins you want to have Vundle installed ala:
+1.)$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+2.)$ vim ~/.vimrc
+
 3.)from vim command-mode :BundleInstall
 
 4.)The previous step will install all my bundled vim plugins/colors and such
 
-
 Some notes, in case anyone decides to clone:
+-urxvt
+    <shift>+<down>  --> spawns new urxvt tab  
+    <shift>+<up>    --> renames infocus tab  
+    <shift>+<left>  --> goto left tab  
+    <shift>+<right> --> goto right tab  
+    
+-awesomewm
+    i think vicious is broken in some aspects, will look later.
+    uneeded, will fix later.
 
-As of 9-24-2013:
-
-
-
-- I'm slowing trying out zsh, I will have tmux spawn a terminal with zsh as the prompt. Currently, I'm still on bash; in the interest of still getting things done.
-
-- Previously, I had urxvt tabs binded to the shift keys, I've replaced that with having tmux tabs/windows being binded to the shift keys. Might write a if function to dictate, based on whats in focus, so I can have the best of both worlds.
-
-- Switched over to tmux, trying it out, will still be using screen, screen updates to come.
-
+```
 
 
 
