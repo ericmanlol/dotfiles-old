@@ -65,6 +65,7 @@ beautiful.init(awful.util.getdir("config") .. "/themes/multicolor/theme.lua")
 modkey     = "Mod4"
 altkey     = "Mod1"
 terminal   = "urxvtc" or "xterm"
+tmuxterm   = "urxvt -e bash -c \"tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME\""
 editor     = os.getenv("EDITOR") or "nano" or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -487,6 +488,9 @@ globalkeys = awful.util.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+    -- tmuxterm
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.util.spawn(tmuxterm) end),
+    
     awful.key({ modkey, "Control" }, "r",      awesome.restart),
     awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
 

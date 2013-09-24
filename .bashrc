@@ -76,9 +76,10 @@ cp $1 ${1}-`date +%Y%m%d%H%M`.BAK ;
 shopt -s histappend
 export PROMPT_COMMAND='history -a' 
 
-
+alias tmux='tmux -2'
 alias src='source ~/.bashrc'
-export TERM=xterm
+#export TERM=xterm
+export TERM="xterm-256color"
 
 
 #going to switch my ssh aliases to rely on custom host file that i'll pull from a server via restful api
