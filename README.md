@@ -1,11 +1,13 @@
 As of 9-19-2013 New Setup (About 40% done)
 --------------------------
 Mad Scientist Plans:
-- [x] Re-do wm config
-- [x] Add completely re-vamped vim.
-- [x] Migration from screen to tmux.
-- [ ] Migration from bash to zsh.
+- Re-do wm config [x]
+- Add completely re-vamped vim. [x]
+- Migration from screen to tmux. [x]
+- Migration from bash to zsh. [ ]
     - currently using zsh as secondary shell on shift+mod+enter via tmux
+
+
 Screen Shot:
 ![ss](http://i.imgur.com/3QPJM7J.jpg)
 
