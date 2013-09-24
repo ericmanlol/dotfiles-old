@@ -60,7 +60,8 @@ For my ViM plugins you want to have NeoBundle installed ala:
 $ vim ~/.vimrc
 ```
 from vim command-mode
-``` :NeoBundleInstall
+``` 
+:NeoBundleInstall
 ```
 
 The previous step will install all my bundled vim plugins/colors and such
