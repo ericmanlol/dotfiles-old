@@ -24,7 +24,8 @@ were overwritten by my adventures in urxvt perl extension land.
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
 
-
+General configs
+---------------
 How to use?
 
 1.  Install dotfiles
@@ -66,7 +67,8 @@ $dotfiles --sync
 6.  Fin.
 
 
-
+VIM
+---
 For my ViM plugins you want to have NeoBundle installed ala:
 ```
  $ mkdir -p ~/.vim/bundle
@@ -83,6 +85,10 @@ from vim command-mode
 The previous step will install all my bundled vim plugins/colors and such
 
 
+
+
+More Notes
+----------
 Some notes, in case anyone decides to clone:
 
 As of 9-24-2013:
