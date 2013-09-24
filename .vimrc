@@ -101,15 +101,8 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'koron/nyancat-vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'ton/vim-bufsurf'
+NeoBundle 'terryma/vim-smooth-scroll'
 
-
-"bundle install list
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'klen/python-mode'
-"Bundle 'davidhalter/jedi-vim'
-"Bundle 'ervandew/supertab'
-"Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 
 
@@ -347,4 +340,11 @@ if &term =~ '256color'
   " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
+
+
+"smooth scroll trial via terryma, like most of my config :)
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
