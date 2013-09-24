@@ -26,6 +26,7 @@ backgrounded daemon.
 
 
 How to use?
+
 1.  Install dotfiles
 ```
 $pip install dotfiles
