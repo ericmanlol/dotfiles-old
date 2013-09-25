@@ -9,8 +9,10 @@ Mad Scientist Plans:
 
 
 Screen Shot:
+A little dirty(initial changes):
 ![ss](http://i.imgur.com/3QPJM7J.jpg)
-
+Moar dirty(with more configs 9-25-2013):
+![ss](http://i.imgur.com/XlbOoVM.png)
 
 
 
