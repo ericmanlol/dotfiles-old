@@ -1,3 +1,7 @@
+"github.com/ericmanlol
+"a lot of inspiration from various other .vimrc's
+"
+
 "disable vi compatibility
 set nocompatible
 
@@ -19,7 +23,8 @@ NeoBundle 'Shougo/vimproc', { 'build': {
       \ } }
 
 
-"fuzzy search
+" Fuzzy Search {{{
+"============================================================================
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/unite-help'
@@ -27,42 +32,62 @@ NeoBundle 'Shougo/unite-session'
 NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'mileszs/ack.vim'
 
+"}}}
 
 
-"Code completion
+"Code completion {{{
+"============================================================================
 "NeoBundle'Shougo/neocomplcache'
 "NeoBundle 'vim-scripts/AutoComplPop'
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Shougo/neocomplete'
 
-" Snippets
+"}}}
+
+" Snippets {{{
+"============================================================================
 " NeoBundle 'Shougo/neosnippet'
 " NeoBundle 'honza/vim-snippets'
-NeoBundle 'SirVer/ultisnips'
+"NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'JazzCore/neocomplcache-ultisnips'
 
+"}}}
 
-" Marks
+
+" Marks {{{
+"============================================================================
 " NeoBundle 'kshenoy/vim-signature'
 
+"}}}
+
+
 " Comments
+"============================================================================
 NeoBundle 'scrooloose/nerdcommenter'
 
 
+"}}}
 
 
-" File browsing
+" File browsing {{{
+"============================================================================
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/vimfiler'
 
+"}}}
+
 " Syntax checker
+"============================================================================
 NeoBundle 'scrooloose/syntastic'
 
 " Shell
+"============================================================================
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'tpope/vim-dispatch'
 
-" File types
+" File types {{{
+"============================================================================
 " NeoBundle 'rstacruz/sparkup', {'rtp': 'vim'} "HTML
 NeoBundle 'amirh/HTML-AutoCloseTag'
 NeoBundle 'tpope/vim-markdown' "Markdown
@@ -75,16 +100,25 @@ NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tsaleh/vim-matchit'
 
- 
-"Git
+"}}}
+
+"Git {{{
+"============================================================================
 NeoBundle "tpope/vim-fugitive"
 
-" Status line
+"}}}
+
+" Status line {{{
+"============================================================================
 NeoBundle 'bling/vim-airline' " So much faster than Powerline! :)
 "NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+"}}}
+
 "color themes
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 " Tags
 " NeoBundle 'xolox/vim-easytags'
@@ -111,8 +145,8 @@ syntax enable
 
 NeoBundleCheck
 
-"====================================================================
-"General
+
+"General Settings {{{
 "====================================================================
 " Set augroup
 augroup MyAutoCmd
@@ -127,7 +161,13 @@ set number
 "This is specifically set because I went on a date with a pretty/elite C/systems-level coder-girl that laughed at me
 "when I said that I use python and then told me she only uses cc=80.  #nostalgia -EM
 set textwidth=120
-set cc=120
+set wrap
+set whichwrap+=h,l,<,>,[,]
+
+"set textwidth=80
+
+"testing a +1 cc
+"set cc=120
 
 "256bit terminal
 set t_Co=256
@@ -136,7 +176,7 @@ set t_Co=256
 set laststatus=2
 
 
-
+"spacing / indents
 set autoindent
 set tabstop=4
 set softtabstop=4
@@ -145,16 +185,23 @@ set smarttab
 set expandtab
 
 set backspace=indent,eol,start
-set incsearch
-set smartindent
-set textwidth=80
+set autoindent
+set nosmartindent
+"set smartindent
+
+
+
 set hlsearch
 
 "case insensitive search
 set ignorecase
 set smartcase
+"search improvement
+set incsearch
 
+"also hotkeyed to leader + 1
 set paste
+
 
 set noanti
 
@@ -172,21 +219,26 @@ set autoread
 "show mode is unneeded due to airline/powerline
 set noshowmode
 
+"allow change buffer without saving it first
 set hidden
 
 set title
 
 "set visualbell
 
-"set wildmenu
 
 set nocompatible
 
 
-colorscheme Tomorrow-Night
+"colorscheme Tomorrow-Night
+"colorscheme jellybeans
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
 
 " Explicitly set encoding to utf-8
 set encoding=utf-8
+set termencoding=utf-8
+
 
 
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L] 
@@ -195,19 +247,117 @@ set cursorline
 
 
 
-set linebreak
 
 
 "Toggle line numbers and fold column for easy copying:
-"nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR> 
+"nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+
+" Display unprintable chars
+set list
+set listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:␣
+set showbreak=↪
+
+
+" listchar=trail is not as flexible, use the below to highlight trailing
+" whitespace. Don't do it for unite windows or readonly files
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+augroup MyAutoCmd
+  autocmd BufWinEnter * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+$/ | endif
+  autocmd InsertEnter * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+\%#\@<!$/ | endif
+  autocmd InsertLeave * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+$/ | endif
+  autocmd BufWinLeave * if &modifiable && &ft!='unite' | call clearmatches() | endif
+augroup END
+
+" Minimal number of screen lines to keep above and below the cursor
+set scrolloff=10
 
 
 
+" How many lines to scroll at a time, make scrolling appears faster
+set scrolljump=3
+
+"min lines to keep above and below cursor
+set scrolloff=10
+
+" Min width of the number column to the left
+set numberwidth=1
+
+" Open all folds initially
+set foldmethod=indent
+set foldlevelstart=99
+
+" No need to show mode
+set noshowmode
+
+" Auto complete setting
+set completeopt=longest,menuone
+
+set wildmode=list:longest,full
+set wildmenu "turn on wild menu
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
+set wildignore+=*/.nx/**,*.app
+
+"split to the right and below
+set splitright
+set splitbelow
+
+"testing this for split height
+set winheight=50
+
+"regex
+set magic
+
+"show incomplete commands
+set showcmd
+
+" Column width indicator
+set colorcolumn=+1
+
+
+autocmd MyAutoCmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc
+      \ so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+
+try
+  lang en_us
+catch
+endtry
 
 
 
+"}}}
+
+
+
+"Function Key Mappings {{{
 "===============================================================================
-" Leader Key Mappings
+
+" <F1>: Help
+nmap <F1> [unite]h
+
+" <F2>: Open Vimfiler
+
+" <F3>: Gundo
+nnoremap <F3> :<C-u>GundoToggle<CR>
+
+" <F4>: Save session
+nnoremap <F4> :<C-u>UniteSessionSave
+
+"}}}
+
+
+
+
+
+" Leader Key Mappings {{{
 "===============================================================================
 
 " Map leader and localleader key to comma
@@ -232,10 +382,17 @@ nnoremap <silent> <Leader><tab> :NERDTreeToggle<cr>
 " <Leader>,: Switch to previous split
 nnoremap <Leader>, <C-w>p
 
+"}}}
 
-"===============================================================================
-" Fugitive
-"===============================================================================
+
+
+
+
+
+
+
+" Fugitive{{{
+"============================================================================
 
 nnoremap <Leader>gb :Gblame<cr>
 nnoremap <Leader>gc :Gcommit<cr>
@@ -247,16 +404,21 @@ nnoremap <Leader>gw :Gwrite<cr>
 " Quickly stage, commit, and push the current file. Useful for editing .vimrc
 nnoremap <Leader>gg :Gwrite<cr>:Gcommit -m 'update'<cr>:Git push<cr>
 
+"}}}
 
-"Airline
+
+" Airline{{{
 "===============================================================================
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-"===============================================================================
-" NERDTree
+
+"}}}
+
+
+" NERDTree {{{
 "===============================================================================
 
 let NERDTreeShowBookmarks=1
@@ -266,27 +428,212 @@ let NERDTreeIgnore=['\~$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 autocmd MyAutoCmd BufEnter * 
       \ if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+"}}}
 
 
+
+" Unite {{{
 "===============================================================================
-" Autocommands
+
+" Use the fuzzy matcher for everything
+
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+" Use the rank sorter for everything
+call unite#filters#sorter_default#use(['sorter_rank'])
+
+" Set up some custom ignores
+call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+      \ 'ignore_pattern', join([
+      \ '\.git/',
+      \ 'git5/.*/review/',
+      \ 'google/obj/',
+      \ 'tmp/',
+      \ '.sass-cache',
+      \ ], '\|'))
+
+" Map space to the prefix for Unite
+nnoremap [unite] <Nop>
+nmap <space> [unite]
+
+" General fuzzy search
+nnoremap <silent> [unite]<space> :<C-u>Unite
+      \ -buffer-name=files buffer file_mru bookmark file_rec/async<CR>
+
+" Quick registers
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+
+" Quick buffer and mru
+nnoremap <silent> [unite]u :<C-u>Unite -buffer-name=buffers buffer file_mru<CR>
+
+" Quick yank history
+nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<CR>
+
+" Quick outline
+nnoremap <silent> [unite]o :<C-u>Unite -buffer-name=outline -vertical outline<CR>
+
+" Quick sessions (projects)
+nnoremap <silent> [unite]p :<C-u>Unite -buffer-name=sessions session<CR>
+
+" Quick sources
+nnoremap <silent> [unite]a :<C-u>Unite -buffer-name=sources source<CR>
+
+" Quick snippet
+nnoremap <silent> [unite]s :<C-u>Unite -buffer-name=snippets snippet<CR>
+
+" Quickly switch lcd
+nnoremap <silent> [unite]d
+      \ :<C-u>Unite -buffer-name=change-cwd -default-action=lcd directory_mru<CR>
+
+" Quick file search
+nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file_rec/async file/new<CR>
+
+" Quick grep from cwd
+nnoremap <silent> [unite]g :<C-u>Unite -buffer-name=grep grep:.<CR>
+
+" Quick help
+nnoremap <silent> [unite]h :<C-u>Unite -buffer-name=help help<CR>
+
+" Quick line using the word under cursor
+nnoremap <silent> [unite]l :<C-u>UniteWithCursorWord -buffer-name=search_file line<CR>
+
+" Quick MRU search
+nnoremap <silent> [unite]m :<C-u>Unite -buffer-name=mru file_mru<CR>
+
+" Quick find
+nnoremap <silent> [unite]n :<C-u>Unite -buffer-name=find find:.<CR>
+
+" Quick commands
+nnoremap <silent> [unite]c :<C-u>Unite -buffer-name=commands command<CR>
+
+" Quick bookmarks
+nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=bookmarks bookmark<CR>
+
+" Fuzzy search from current buffer
+" nnoremap <silent> [unite]b :<C-u>UniteWithBufferDir
+      " \ -buffer-name=files -prompt=%\  buffer file_mru bookmark file<CR>
+
+" Quick commands
+nnoremap <silent> [unite]; :<C-u>Unite -buffer-name=history history/command command<CR>
+
+" Custom Unite settings
+autocmd MyAutoCmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+  imap <buffer> <ESC> <Plug>(unite_exit)
+  " imap <buffer> <c-j> <Plug>(unite_select_next_line)
+  imap <buffer> <c-j> <Plug>(unite_insert_leave)
+  nmap <buffer> <c-j> <Plug>(unite_loop_cursor_down)
+  nmap <buffer> <c-k> <Plug>(unite_loop_cursor_up)
+  imap <buffer> <c-a> <Plug>(unite_choose_action)
+  imap <buffer> <Tab> <Plug>(unite_exit_insert)
+  imap <buffer> jj <Plug>(unite_insert_leave)
+  imap <buffer> <C-w> <Plug>(unite_delete_backward_word)
+  imap <buffer> <C-u> <Plug>(unite_delete_backward_path)
+  imap <buffer> '     <Plug>(unite_quick_match_default_action)
+  nmap <buffer> '     <Plug>(unite_quick_match_default_action)
+  nmap <buffer> <C-r> <Plug>(unite_redraw)
+  imap <buffer> <C-r> <Plug>(unite_redraw)
+  inoremap <silent><buffer><expr> <C-s> unite#do_action('split')
+  nnoremap <silent><buffer><expr> <C-s> unite#do_action('split')
+  inoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+  nnoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+
+  let unite = unite#get_current_unite()
+  if unite.buffer_name =~# '^search'
+    nnoremap <silent><buffer><expr> r     unite#do_action('replace')
+  else
+    nnoremap <silent><buffer><expr> r     unite#do_action('rename')
+  endif
+
+  nnoremap <silent><buffer><expr> cd     unite#do_action('lcd')
+
+  " Using Ctrl-\ to trigger outline, so close it using the same keystroke
+  if unite.buffer_name =~# '^outline'
+    imap <buffer> <C-\> <Plug>(unite_exit)
+  endif
+
+  " Using Ctrl-/ to trigger line, close it using same keystroke
+  if unite.buffer_name =~# '^search_file'
+    imap <buffer> <C-_> <Plug>(unite_exit)
+  endif
+endfunction
+
+" Start in insert mode
+let g:unite_enable_start_insert = 1
+
+" Enable short source name in window
+" let g:unite_enable_short_source_names = 1
+
+" Enable history yank source
+let g:unite_source_history_yank_enable = 1
+
+" Open in bottom right
+let g:unite_split_rule = "botright"
+
+" Shorten the default update date of 500ms
+let g:unite_update_time = 200
+
+let g:unite_source_file_mru_limit = 1000
+let g:unite_cursor_line_highlight = 'TabLineSel'
+" let g:unite_abbr_highlight = 'TabLine'
+
+let g:unite_source_file_mru_filename_format = ':~:.'
+let g:unite_source_file_mru_time_format = ''
+
+" For ack.
+if executable('ack-grep')
+  let g:unite_source_grep_command = 'ack-grep'
+  " Match whole word only. This might/might not be a good idea
+  let g:unite_source_grep_default_opts = '--no-heading --no-color -a -w'
+  let g:unite_source_grep_recursive_opt = ''
+elseif executable('ack')
+  let g:unite_source_grep_command = 'ack'
+  let g:unite_source_grep_default_opts = '--no-heading --no-color -a -w'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+
+"}}}
+
+
+
+" Unite Sessions {{{
+"===============================================================================
+
+" Save session automatically.
+let g:unite_source_session_enable_auto_save = 1
+
+" Pop up session selection if no file is specified
+" TODO: Why does this not work when Vim isn't run from tmux???!
+autocmd MyAutoCmd VimEnter * call s:unite_session_on_enter()
+function! s:unite_session_on_enter()
+  if !argc() && !exists("g:start_session_from_cmdline")
+    Unite -buffer-name=sessions session
+  endif
+endfunction
+
+"}}}
+
+
+" Autocommands {{{
 "===============================================================================
 
 " Turn on cursorline only on active window
 " Cursorline makes things REALLY slow for me. Especially moving left and right
 " on the same line when syntax highlight is on.
 " http://briancarper.net/blog/590/cursorcolumn--cursorline-slowdown
-augroup MyAutoCmd
+"augroup MyAutoCmd
   " autocmd WinLeave * setlocal nocursorline
   " autocmd WinEnter,BufRead * setlocal cursorline
-augroup END
+"augroup END
 
-function! CursorPing()
-    set cursorline cursorcolumn
-    redraw
-    sleep 200m
-    set nocursorline nocursorcolumn
-endfunction
+"function! CursorPing()
+"    set cursorline cursorcolumn
+"    redraw
+"    sleep 200m
+"    set nocursorline nocursorcolumn
+"endfunction
 
 " q quits in certain page types. Don't map esc, that interferes with mouse input
 autocmd MyAutoCmd FileType help,quickrun
@@ -315,6 +662,19 @@ augroup END
 " au MyAutoCmd FilterWritePre * if &diff | exe 'nnoremap <c-p> [c' | exe 'nnoremap <c-n> ]c' | endif
 
 
+
+"}}}
+
+"===============================================================================
+" VimShell
+"===============================================================================
+
+let g:vimshell_prompt = "% "
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+autocmd MyAutoCmd FileType vimshell call s:vimshell_settings()
+function! s:vimshell_settings()
+  call vimshell#altercmd#define('g', 'git')
+endfunction
 
 
 
