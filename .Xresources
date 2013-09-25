@@ -3,107 +3,48 @@ Xft.dpi:        96
 Xft.hinting:    1
 Xft.hintstyle:  hintnone
 Xft.rgba:       rgb
-Xft.antialias:  true
-! terminal colors ------------------------------------------------------------
+!Xft.antialias:  false
 
-! tangoesque scheme
-!*background: #111111
-!*foreground: #babdb6
-! Black (not tango) + DarkGrey
-!*color0:  #000000
-!*color8:  #555753
-! DarkRed + Red
-!*color1:  #ff6565
-!*color9:  #ff8d8d
-! DarkGreen + Green
-!*color2:  #93d44f
-!*color10: #c8e7a8
-! DarkYellow + Yellow
-!*color3:  #eab93d
-!*color11: #ffc123
-! DarkBlue + Blue
-!*color4:  #204a87
-!*color12: #3465a4
-! DarkMagenta + Magenta
-!*color5:  #ce5c00
-!*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-!*color6:  #89b6e2
-!*color14: #46a4ff
-! LightGrey + White
-!*color7:  #cccccc
-!*color15: #ffffff
-!end of tango-esque-------------
+! Tomorrow-Night Palette
+#define t_background #1D1F21
+#define t_current_line #282A2E
+#define t_selection #373B41
+#define t_foreground #C5C8C6
+#define t_comment #707880
+#define t_red #CC6666
+#define t_orange #DE935F
+#define t_yellow #F0C674
+#define t_green #B5BD68
+#define t_aqua #8ABEB7
+#define t_blue #81A2BE
+#define t_purple #B294BB
 
-
-!----------------duller
-! Black
-!*color0:   #151515
-!*color8:   #505450
-
-! Red
-!*color1:   #bf7979
-!*color9:   #f4a45f
-
-! Green
-!*color2:   #97b26b
-!*color10:  #c5f779
-
-! Yellow
-!*color3:   #cdcda1
-!*color11:  #ffffaf
-
-! Blue
-!*color4:   #4a5463
-!*color12:  #7d8794
-
-! Magneta
-!*color5:   #9c3885
-!*color13:  #e628ba
-
-! Cyan
-!*color6:   #88aadd
-!*color14:  #99ccff
-
-! White
-!*color7:   #ffffff
-!*color15:  #dedede
-! vim: et sw=2 syn=xdefaults
-!end of duller-------------
-
-!---------------------simple rainbow
-!! simple_rainbow
-*background:  #575757
-*foreground:  #dcdccc
-
-!black
-*color0:      #666666
-*color8:      #888888
-!red
-*color1:      #ff8278
-*color9:      #ff8278
-!green
-*color2:      #bde077
-*color10:     #bde077
-!yellow
-*color3:      #eadc84
-*color11:     #eadc84
-!blue
-*color4:      #77bee0
-*color12:     #77bee0
-!magenta
-*color5:      #dd91f3
-*color13:     #dd91f3
-!cyan
-*color6:      #ffc178
-*color14:     #ffc178
-!white
-*color7:      #dddddd
-*color15:     #cccccc
-!---------------------end simple rainbow
-
-
-
+*background: t_background
+*foreground: t_foreground
+! black
+*color0: t_current_line
+*color8: t_selection
+! red
+*color1: #A54242
+*color9: t_red
+! green
+*color2: #8C9440
+*color10: t_green
+! yellow
+*color3: t_orange
+*color11: t_yellow
+! blue
+*color4: #5F819D
+*color12: t_blue
+! magenta
+*color5: #85678F
+*color13: t_purple
+! cyan
+*color6: #5E8D87
+*color14: t_aqua
+! white
+*color7: t_comment
+*color15: t_foreground
 
 
 
