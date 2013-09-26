@@ -1,4 +1,15 @@
-# Path to your oh-my-zsh configuration.
+#github.com/ericmanlol/dotfiles
+#https://github.com/robbyrussell/oh-my-zsh
+#
+#
+#based on gourmet copypasta from the net + rapid retard style trial and error
+#
+
+
+
+
+
+# Path to my oh-my-zsh fork
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -8,17 +19,16 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="woo"
 
+
+ZSH_THEME_TERM_TAB_TITLE_IDLE="%15<..<%~%<<" #15 char left truncated PWD
+ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~"
+
+#List of others I enjoyed
 #ZSH_THEME="smt"
-
-
 #ZSH_THEME="norm"
-
 #ZSH_THEME="jonathan"
-
 #ZSH_THEME="fino-time"
-
 #ZSH_THEME="duellj"
-
 #ZSH_THEME="alanpeabody"
 
 # Example aliases
@@ -66,7 +76,49 @@ source $ZSH/oh-my-zsh.sh
 [[ -z "$TMUX" ]] && exec tmux
 
 
+
+# History; I'm a bit paranoid about history, since there's always
+#so much to remember.
+##################################################################
+if [ -z $HISTFILE ]; then
+    HISTFILE=$HOME/.zsh_history
+fi
 HISTSIZE=10000
+SAVEHIST=10000
+
+# do i need to explicitly declare this still? with inc_append_history set? humm
+setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_verify
+# Appends every command to the history file once it is executed
+setopt inc_append_history
+# Reloads the history whenever you use it
+setopt share_history
+
+
+
+## Completion Settings
+######################
+
+unsetopt menu_complete   # do not autoselect the first completion entry
+unsetopt flowcontrol
+setopt auto_menu         # show completion menu on succesive tab press
+setopt complete_in_word
+setopt always_to_end
+
+
+## Misc
+#######
+#to be tested
+## smart urls
+#autoload -U url-quote-magic
+#zle -N self-insert url-quote-magic
+## file rename magick
+#bindkey "^[m" copy-prev-shell-word
+
+## jobs
+setopt long_list_jobs
 
 
 # extract function
@@ -88,7 +140,7 @@ case $1 in
     esac
 else
 echo "'$1' is not a valid file!"
-  fi  
+  fi
 }
 
 
