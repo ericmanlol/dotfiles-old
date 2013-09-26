@@ -23,7 +23,8 @@ Todo:
 - emacs bash key bindings (ctrl+right arrow | ctrl + left arrow) I believe 
 were overwritten by my adventures in urxvt perl extension land.
 - copy/paste works fine but I'd like to have a right click menu dammit. 
-    - look for elusive urxvt right click menu or make one myself.
+    - look for/research urxvt right click menu or make one myself. or look into xclip.
+- ever elusive sortable taglist by scope
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
