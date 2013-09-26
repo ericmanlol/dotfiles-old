@@ -2,7 +2,7 @@
                                       
      Multicolor Awesome WM config 2.0 
      github.com/copycat-killer        
-    hacked a-part by em                                      
+     hacked a-part by em                                      
 --]]
 
 
