@@ -121,7 +121,10 @@ setopt always_to_end
 setopt long_list_jobs
 
 
+
+
 # extract function
+#=====================================================================
 extract() {
   if [[ -f $1 ]]; then
 case $1 in
@@ -143,5 +146,55 @@ echo "'$1' is not a valid file!"
   fi
 }
 
+# dirstack handling {{{
 
+DIRSTACKSIZE=${DIRSTACKSIZE:-20}
+DIRSTACKFILE=${DIRSTACKFILE:-${HOME}/.zdirs}
+
+if [[ -f ${DIRSTACKFILE} ]] && [[ ${#dirstack[*]} -eq 0 ]] ; then
+    dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+    # "cd -" won't work after login by just setting $OLDPWD, so
+    [[ -d $dirstack[0] ]] && cd $dirstack[0] && cd $OLDPWD
+fi
+
+chpwd() {
+    local -ax my_stack
+    my_stack=( ${PWD} ${dirstack} )
+    #if is42 ; then
+        builtin print -l ${(u)my_stack} >! ${DIRSTACKFILE}
+    #else
+    #    uprint my_stack >! ${DIRSTACKFILE}
+    #fi
+}
+
+# }}}
+
+
+# Determine a directory sizes {{{
+dirsize() {
+    du -shx * .[a-zA-Z0-9_]* 2> /dev/null | \
+    egrep '^ *[0-9.]*[MG]' | sort -n > /tmp/list
+    egrep '^ *[0-9.]*M' /tmp/list
+    egrep '^ *[0-9.]*G' /tmp/list
+    rm -rf /tmp/list &> /dev/null
+}
+
+# }}}
+
+#- Define a word - USAGE: define dog
+define() {
+    lynx -dump "http://www.google.com/search?hl=en&q=define%3A+${1}&btnG=Google+Search" | grep -m 3 -w "*"  | sed 's/;/ -/g' | cut -d- -f1 > /tmp/templookup.txt
+    if [[ -s  /tmp/templookup.txt ]] ;then
+        until ! read response
+        do
+            echo "${response}"
+        done < /tmp/templookup.txt
+    else
+        echo "Sorry, I can't find the term \"${1} \""
+    fi
+    rm -f /tmp/templookup.txt > /dev/null
+}
+
+# aliases 
+#=====================================================================
 alias src='source ~/.zshrc'
