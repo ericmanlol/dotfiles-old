@@ -1,4 +1,4 @@
-As of 9-19-2013 New Setup (About 40% done)
+As of 9-19-2013 New Setup (About 80% done, still updating .vim configs)
 --------------------------
 Mad Scientist Plans:
 - Re-do wm config [x]
