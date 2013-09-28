@@ -4,7 +4,7 @@ Mad Scientist Plans:
 - Re-do wm config [x]
 - Add completely re-vamped vim. [x]
 - Migration from screen to tmux. [x]
-- Migration from bash to zsh. [ ]
+- Migration from bash to zsh. [x]
     - currently using zsh as secondary shell on shift+mod+enter via tmux
 
 
@@ -82,14 +82,15 @@ For my ViM plugins you want to have NeoBundle installed ala:
 ```
 $ vim ~/.vimrc
 ```
-from vim command-mode
+from vim
 ``` 
 :NeoBundleInstall
 ```
 
 The previous step will install all my bundled vim plugins/colors and such
 
-
+Note: For powerline/airline please be aware you will have to either patch your fonts or use one of the patched fonts.
+I've switched from dina back to terminus; which is fine by me as I've realized dina is xft/AA. 
 
 
 More Notes
