@@ -4,7 +4,7 @@
 #CPPFLAGS='-I/usr/include/python3.3m -I/usr/include/i386-linux-gnu/python3.3m' \
 ./configure \
 --with-features=huge \
---with-compiledby="Shougo" \
+--with-compiledby="ericmanlol" \
 --enable-multibyte \
 --enable-gui=gtk2 \
 --enable-rubyinterp \
