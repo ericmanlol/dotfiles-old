@@ -39,8 +39,8 @@ NeoBundle 'mileszs/ack.vim'
 "============================================================================
 "NeoBundle'Shougo/neocomplcache'
 "NeoBundle 'vim-scripts/AutoComplPop'
-"NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Shougo/neocomplete'
 
 "}}}
 
@@ -85,6 +85,9 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'vim-scripts/Conque-Shell'
+
+
 
 " File types {{{
 "============================================================================
@@ -136,8 +139,11 @@ NeoBundle 'koron/nyancat-vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'ton/vim-bufsurf'
 NeoBundle 'terryma/vim-smooth-scroll'
-
-
+" testing
+NeoBundle 'klen/python-mode.git'
+"NeoBundle 'tpope/vim-surround'
+NeoBundle 'Yggdroot/indentLine'
+let g:indentLine_color_term = 239
 
 
 filetype plugin indent on
@@ -160,7 +166,7 @@ set number
 
 "This is specifically set because I went on a date with a pretty/elite C/systems-level coder-girl that laughed at me
 "when I said that I use python and then told me she only uses cc=80.  #nostalgia -EM
-set textwidth=120
+set textwidth=80
 set wrap
 set whichwrap+=h,l,<,>,[,]
 
