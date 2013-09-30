@@ -1,18 +1,19 @@
 #!/bin/sh
 
-#CFLAGS='-g -O0' CPPFLAGS='-I/usr/include/python3.3m -I/usr/include/i386-linux-gnu/python3.3m' \
-#CPPFLAGS='-I/usr/include/python3.3m -I/usr/include/i386-linux-gnu/python3.3m' \
 ./configure \
+--prefix=/usr/local/bin \
 --with-features=huge \
---with-compiledby="ericmanlol" \
+--with-compiledby="woo" \
 --enable-multibyte \
 --enable-gui=gtk2 \
 --enable-rubyinterp \
---enable-python3interp \
---with-python3-config-dir=/usr/lib/python3.3/config-3.3m-i386-linux-gnu \
---enable-luainterp \
---with-lua-prefix=/usr --with-luajit \
---enable-gpm \
---enable-cscope \
---enable-fontset \
---enable-fail-if-missing
+--enable-pythoninterp \
+--with-python-config-dir=/usr/local/lib/python2.7/config \
+#--enable-pythoninterp \
+#--with-python-config-dir=/usr/local/lib/python2.7/config \
+--enable-luainterp
+#--with-lua-prefix=/usr --with-luajit \
+#--enable-gpm \
+#--enable-cscope \
+#--enable-fontset \
+#--enable-fail-if-missing

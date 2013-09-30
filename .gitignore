@@ -22,6 +22,7 @@
 .config/awesome-*
 .config/awesome/awesome-*
 .config/sublime-text2/Backup/*
+.config/sublime-text2/Packages/*
 .config/chromium*
 ############
 
