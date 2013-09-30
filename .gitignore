@@ -21,8 +21,8 @@
 .vim/*
 .config/awesome-*
 .config/awesome/awesome-*
-.config/sublime-text2/Backup/*
-.config/sublime-text2/Packages/*
+.config/sublime-text-2/Backup/*
+.config/sublime-text-2/Packages/*
 .config/chromium*
 ############
 
