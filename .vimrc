@@ -48,7 +48,7 @@ NeoBundle 'Valloric/YouCompleteMe'
 "============================================================================
 " NeoBundle 'Shougo/neosnippet'
 " NeoBundle 'honza/vim-snippets'
-"NeoBundle 'SirVer/ultisnips'
+NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'JazzCore/neocomplcache-ultisnips'
 
 "}}}
@@ -85,7 +85,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'vim-scripts/Conque-Shell'
+"NeoBundle 'vim-scripts/Conque-Shell'
 
 
 
@@ -388,14 +388,88 @@ nnoremap <silent> <Leader><tab> :NERDTreeToggle<cr>
 " <Leader>,: Switch to previous split
 nnoremap <Leader>, <C-w>p
 
+" <Leader>e: Fast editing of the .vimrc
+nnoremap <Leader>e :e! ~/.dotfiles/.vimrc<cr>
+
+" <Leader>w: Close current buffer
+nnoremap <Leader>w :bdelete<cr>
+
+" <Leader>0: Run the visually selected code in python and replace it with the
+" output
+vnoremap <silent> <Leader>0 :!python<cr>
+
+
+" <Leader>p: Copy the full path of the current file to the clipboard
+nnoremap <silent> <Leader>p :let @+=expand("%:p")<cr>:echo "Copied current file
+      \ path '".expand("%:p")."' to clipboard"<cr>
+
+
+" <Leader>f: Open Quickfix
+nnoremap <silent> <Leader>f :botright copen<CR>
+
+" <Leader>c*: NERDCommenter mappings
+" <Leader>cd: Switch to the directory of the open buffer
+nnoremap <Leader>cd :cd %:p:h<cr>:pwd<cr>
+
+
 "}}}
 
 
+" Command-line Mode Key Mappings {{{
+"===============================================================================
+
+" Bash like keys for the command line. These resemble personal zsh mappings
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
 
 
 
 
+"}}}
 
+
+" Normal Mode Shift Key Mappings {{{
+"===============================================================================
+
+" Shift-Tab: NERDTree
+nnoremap <S-Tab> :NERDTreeToggle<CR>
+
+" Q: Closes the window
+nnoremap Q :q<cr>
+
+" U: Redos since 'u' undos
+nnoremap U :redo<cr>
+
+" _ : Quick horizontal splits
+nnoremap _ :sp<cr>
+
+" | : Quick vertical splits
+nnoremap <bar> :vsp<cr>
+
+" J: expand-region
+map K <Plug>(expand_region_expand)
+
+" K: shrink-region
+map J <Plug>(expand_region_shrink)
+
+" :: Remap to ,. After all the remapping, ; goes to command mode, . repeats
+" fFtT, : repeats it backward, and , is the leader
+"this is disabled and removed because I almost owned myself hard
+
+
+"}}}
+
+" Normal Mode Meta Key Mappings {{{
+"===============================================================================
+
+" Alt-a: Select all
+nnoremap  :keepjumps normal ggVG<CR>
+
+
+"alt+h go back to previous buffer
+nnoremap <silent> h :bprevious<CR>
+
+"}}}
 
 " Fugitive{{{
 "============================================================================
@@ -629,17 +703,17 @@ endfunction
 " Cursorline makes things REALLY slow for me. Especially moving left and right
 " on the same line when syntax highlight is on.
 " http://briancarper.net/blog/590/cursorcolumn--cursorline-slowdown
-"augroup MyAutoCmd
+augroup MyAutoCmd
   " autocmd WinLeave * setlocal nocursorline
   " autocmd WinEnter,BufRead * setlocal cursorline
-"augroup END
+augroup END
 
-"function! CursorPing()
-"    set cursorline cursorcolumn
-"    redraw
-"    sleep 200m
-"    set nocursorline nocursorcolumn
-"endfunction
+function! CursorPing()
+    set cursorline cursorcolumn
+    redraw
+    sleep 200m
+    set nocursorline nocursorcolumn
+endfunction
 
 " q quits in certain page types. Don't map esc, that interferes with mouse input
 autocmd MyAutoCmd FileType help,quickrun
@@ -671,8 +745,8 @@ augroup END
 
 "}}}
 
-"===============================================================================
-" VimShell
+
+" VimShell {{{
 "===============================================================================
 
 let g:vimshell_prompt = "% "
@@ -707,10 +781,86 @@ if &term =~ '256color'
   set t_ut=
 endif
 
+"}}}
 
-"smooth scroll trial via terryma, like most of my config :)
+"smooth scroll trial via terryma
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+
+
+" ScratchBuffer {{{
+"===============================================================================
+
+autocmd MyAutoCmd User PluginScratchInitializeAfter
+\ call s:on_User_plugin_scratch_initialize_after()
+
+function! s:on_User_plugin_scratch_initialize_after()
+  map <buffer> <CR>  <Plug>(scratch-evaluate!)
+endfunction
+let g:scratch_show_command = 'hide buffer'
+
+"}}}
+
+
+
+
+
+
+
+" Instant Markdown {{{
+"===============================================================================
+
+" let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+
+"}}}
+
+
+" UltiSnips {{{
+"===============================================================================
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+
+" Make UltiSnips works nicely with YCM
+function! g:UltiSnips_Complete()
+    call UltiSnips_ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips_JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsListSnippets="<c-e>"
+
+"}}}
+
+" YCM {{{
+"===============================================================================
+
+let g:ycm_confirm_extra_conf = 0
+let g:EclimCompletionMethod = 'omnifunc'
+let g:ycm_filetype_blacklist = {
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'text' : 1,
+      \ 'unite' : 1
+      \}
+
+"}}}
+
 
