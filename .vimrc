@@ -338,6 +338,18 @@ catch
 endtry
 
 
+" Cursor settings. This makes terminal vim sooo much nicer!
+" Tmux will only forward escape sequences to the terminal if surrounded by a DCS
+" sequence
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+
 
 "}}}
 
@@ -599,8 +611,8 @@ nnoremap <silent> [unite]; :<C-u>Unite -buffer-name=history history/command comm
 autocmd MyAutoCmd FileType unite call s:unite_settings()
 function! s:unite_settings()
 
-  nmap <buffer> <ESC> <Plug>(unite_exit)
-  imap <buffer> <ESC> <Plug>(unite_exit)
+"  nmap <buffer> <ESC> <Plug>(unite_exit)
+"  imap <buffer> <ESC> <Plug>(unite_exit)
   " imap <buffer> <c-j> <Plug>(unite_select_next_line)
   imap <buffer> <c-j> <Plug>(unite_insert_leave)
   nmap <buffer> <c-j> <Plug>(unite_loop_cursor_down)
