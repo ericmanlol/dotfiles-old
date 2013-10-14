@@ -25,6 +25,7 @@ were overwritten by my adventures in urxvt perl extension land.
 - copy/paste works fine but I'd like to have a right click menu dammit. 
     - look for/research urxvt right click menu or make one myself. or look into xclip.
 - ever elusive sortable taglist by scope
+- added my theme to my fork of ohmyzsh
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
