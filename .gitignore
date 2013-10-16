@@ -27,7 +27,7 @@
 .config/configstore*
 .config/sublime-text-2/Settings*
 .config/sublime-text-2/Packages/User/SublimeREPLHistory*
-
+.sublime/*
 ############
 
 # Packages #
