@@ -41,6 +41,7 @@ NeoBundle 'mileszs/ack.vim'
 "NeoBundle 'vim-scripts/AutoComplPop'
 NeoBundle 'Valloric/YouCompleteMe'
 "NeoBundle 'Shougo/neocomplete'
+NeoBundle 'mattn/emmet-vim'
 
 "}}}
 
