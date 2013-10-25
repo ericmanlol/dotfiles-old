@@ -41,7 +41,8 @@ NeoBundle 'mileszs/ack.vim'
 "NeoBundle 'vim-scripts/AutoComplPop'
 NeoBundle 'Valloric/YouCompleteMe'
 "NeoBundle 'Shougo/neocomplete'
-NeoBundle 'mattn/emmet-vim'
+"testing emmet on vim
+"NeoBundle 'mattn/emmet-vim'
 
 "}}}
 
@@ -876,4 +877,9 @@ let g:ycm_filetype_blacklist = {
 
 "}}}
 
+"Emmet {{{
+"let g:user_emmet_leader_key = '<c-s>'
 
+
+
+"}}}
