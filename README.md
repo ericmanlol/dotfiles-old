@@ -16,7 +16,7 @@ Mad Scientist Plans:
 
 Screen Shot:
 
-Clean 10-25-2013:
+Clean via 10-25-2013:
 ![ss](http://i.imgur.com/4YLs34Y.jpg)
 Dirty via 10-25-2013
 ![ss](http://i.imgur.com/M6Qjnff.png)
