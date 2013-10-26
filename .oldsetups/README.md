@@ -1,10 +1,4 @@
-Yo dawg. I heard you like the matrix, so I put the matrix in the matrix in the matrix. :3
-![ss](http://i.imgur.com/Yh52xk1.png)
-
-
-
-
-As of 10-2x-2013 New Setup (About 80% done, still updating .vim configs)
+As of 9-19-2013 New Setup (About 80% done, still updating .vim configs)
 --------------------------
 Mad Scientist Plans:
 - Re-do wm config [x]
@@ -15,10 +9,10 @@ Mad Scientist Plans:
 
 
 Screen Shot:
-Clean 10-25-2013:
-![ss](http://i.imgur.com/4YLs34Y.jpg)
-Dirty via 10-25-2013
-![ss](http://i.imgur.com/M6Qjnff.png)
+A little dirty(initial changes):
+![ss](http://i.imgur.com/3QPJM7J.jpg)
+Moar dirty(with more configs 9-25-2013):
+![ss](http://i.imgur.com/XlbOoVM.png)
 
 
 
