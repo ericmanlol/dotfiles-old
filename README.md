@@ -4,17 +4,18 @@ Yo dawg. I heard you like the matrix, so I put the matrix in the matrix in the m
 
 
 
-As of 10-2x-2013 New Setup (About 80% done, still updating .vim configs)
+As of Octoberish-2013 still work in progress (~80% done, still updating .vim configs)
 --------------------------
 Mad Scientist Plans:
 - Re-do wm config [x]
 - Add completely re-vamped vim. [x]
 - Migration from screen to tmux. [x]
 - Migration from bash to zsh. [x]
-    - currently using zsh as secondary shell on shift+mod+enter via tmux
+    - currently using zsh as secondary shell on shift+mod+enter via tmux (this has been going well)
 
 
 Screen Shot:
+
 Clean 10-25-2013:
 ![ss](http://i.imgur.com/4YLs34Y.jpg)
 Dirty via 10-25-2013
