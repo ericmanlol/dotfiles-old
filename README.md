@@ -12,6 +12,8 @@ Mad Scientist Plans:
 - Migration from screen to tmux. [x]
 - Migration from bash to zsh. [x]
     - currently using zsh as secondary shell on shift+mod+enter via tmux (this has been going well)
+    - zsh has been primary as of late in terms of workflow, will probably keep bash around though just in case.
+    -  todo: implement something to deal with nested tmux sessions when elevating to zsh. (currently have zsh sessions all spawn in tmux)
 
 
 Screen Shot:
