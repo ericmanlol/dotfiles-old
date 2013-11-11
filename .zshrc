@@ -69,6 +69,9 @@ plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+source /home/woo/.nvm/nvm.sh
+
+source /home/woo/.rvm/scripts/rvm
 # Customize to your needs...
 
 # If not running interactively, do not do anything
