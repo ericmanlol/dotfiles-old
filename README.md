@@ -35,6 +35,9 @@ were overwritten by my adventures in urxvt perl extension land.
     - look for/research urxvt right click menu or make one myself. or look into xclip.
 - ever elusive sortable taglist by scope
 - added my theme to my fork of ohmyzsh
+- emacs around x-mas time, i hope.
+- drop in some of my irssi configs
+- increase tmux-irssi love.
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
