@@ -443,7 +443,8 @@ cnoremap <c-e> <end>
 
 " Normal Mode Shift Key Mappings {{{
 "===============================================================================
-"adding back tabs for nerdtree
+"removing tabs in favor of buffers
+
 
 "}}}
 
