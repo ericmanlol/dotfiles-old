@@ -28,16 +28,17 @@ Dirty via 10-25-2013
 
 Todo: 
 - make a dependency list for quick install
-- integrate taglist-y system to vim that has tags by SCOPE, christ.
+- integrate the ever elusive sortable taglist by scope to vim [50% done - 11/27/2013]
 - emacs bash key bindings (ctrl+right arrow | ctrl + left arrow) I believe 
-were overwritten by my adventures in urxvt perl extension land.
+were overwritten by my adventures in urxvt perl extension land. 
 - copy/paste works fine but I'd like to have a right click menu dammit. 
     - look for/research urxvt right click menu or make one myself. or look into xclip.
-- ever elusive sortable taglist by scope
-- added my theme to my fork of ohmyzsh
-- emacs around x-mas time, i hope.
+- added my theme to my fork of ohmyzsh [100% done as of 11-27-2013]
+- (contingent) emacs around x-mas time, i hope.
 - drop in some of my irssi configs
-- increase tmux-irssi love.
+- (11-27-2013) increase tmux-irssi love. [via hotkey settings to auto-resize screen space for nicklist fifo]
+- (11-27-2013) resolve conflicted keybindings for quick vim buffer switches/transitions and awesome/wm layout bindings
+- (11-27-2013) add in my scripts for bootstrapping system-level(userland) things the way I want them.
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
@@ -106,19 +107,7 @@ Note: For powerline/airline please be aware you will have to either patch your f
 I've switched from dina back to terminus; which is fine by me as I've realized dina is xft/AA. 
 
 
-More Notes
-----------
-Some notes, in case anyone decides to clone:
 
-As of 9-24-2013:
-
-
-
-- I'm slowing trying out zsh, I will have tmux spawn a terminal with zsh as the prompt. Currently, I'm still on bash; in the interest of still getting things done.
-
-- Previously, I had urxvt tabs binded to the shift keys, I've replaced that with having tmux tabs/windows being binded to the shift keys. Might write a if function to dictate, based on whats in focus, so I can have the best of both worlds.
-
-- Switched over to tmux, trying it out, will still be using screen, screen updates to come.
 
 
 
