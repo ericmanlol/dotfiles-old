@@ -39,6 +39,7 @@ were overwritten by my adventures in urxvt perl extension land.
 - (11-27-2013) increase tmux-irssi love. [via hotkey settings to auto-resize screen space for nicklist fifo]
 - (11-27-2013) resolve conflicted keybindings for quick vim buffer switches/transitions and awesome/wm layout bindings
 - (11-27-2013) add in my scripts for bootstrapping system-level(userland) things the way I want them.
+- (12-25-2013) add dev branch for unstable changes / experimentation.
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
