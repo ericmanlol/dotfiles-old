@@ -4,18 +4,6 @@ Yo dawg. I heard you like the matrix, so I put the matrix in the matrix in the m
 
 
 
-As of Octoberish-2013 still work in progress (~80% done, still updating .vim configs)
---------------------------
-Mad Scientist Plans:
-- Re-do wm config [x]
-- Add completely re-vamped vim. [x]
-- Migration from screen to tmux. [x]
-- Migration from bash to zsh. [x]
-    - currently using zsh as secondary shell on shift+mod+enter via tmux (this has been going well)
-    - zsh has been primary as of late in terms of workflow, will probably keep bash around though just in case.
-    -  todo: implement something to deal with nested tmux sessions when elevating to zsh. (currently have zsh sessions all spawn in tmux)
-
-
 Screen Shot:
 
 Clean via 10-25-2013:
@@ -108,7 +96,9 @@ Note: For powerline/airline please be aware you will have to either patch your f
 I've switched from dina back to terminus; which is fine by me as I've realized dina is xft/AA. 
 
 
-
+zsh
+---
+my custom zsh theme can be found in my fork: https://github.com/ericmanlol/oh-my-zsh/blob/master/themes/woo.zsh-theme
 
 
 
