@@ -141,12 +141,16 @@ NeoBundle 'koron/nyancat-vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'ton/vim-bufsurf'
 NeoBundle 'terryma/vim-smooth-scroll'
-" testing
-NeoBundle 'klen/python-mode.git'
 "NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
 let g:indentLine_color_term = 239
 
+
+
+"python
+NeoBundle 'klen/python-mode.git'
+"NeoBundle 'hynek/vim-python-pep8-indent.git'
+NeoBundle 'tell-k/vim-autopep8' "fucking godsend
 
 filetype plugin indent on
 syntax enable
@@ -166,8 +170,6 @@ syntax on
 set number
 
 
-"This is specifically set because I went on a date with a pretty/elite C/systems-level coder-girl that laughed at me
-"when I said that I use python and then told me she only uses cc=80.  #nostalgia -EM
 set textwidth=80
 set wrap
 set whichwrap+=h,l,<,>,[,]
@@ -193,7 +195,6 @@ set smarttab
 set expandtab
 
 set backspace=indent,eol,start
-set autoindent
 set nosmartindent
 "set smartindent
 
@@ -892,4 +893,29 @@ let g:ycm_filetype_blacklist = {
 "}}}
 
 
+" Python {{{
+"===============================================================================
+"let g:pymode_indent = 0
+"still having multiline issues, switching to https://github.com/hynek/vim-python-pep8-indent
+"disabling klen's indent to try out hynek's
+
+"disabling pymode syntax highlighting in favor of syntastic
+"ref: http://stackoverflow.com/questions/19209139/syntastic-and-python-mode-together
+"let g:pymode_lint = 0
+
+"python-mode configs to play nicely
+"===
+
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = 'b'
+"Use <leader>b to add a pdb shortcut (inserts import pdb; pdb.set_trace() ### XXX BREAKPOINT into your code
+
+
+" syntax highlighting
+let g:pymode_syntax = 0
+let g:pymode_syntax_all = 0
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+"}}}
 
