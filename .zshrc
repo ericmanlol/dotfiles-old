@@ -198,6 +198,36 @@ define() {
     rm -f /tmp/templookup.txt > /dev/null
 }
 
-# aliases 
+
+
+#python virtualenv
 #=====================================================================
-alias src='source ~/.zshrc'
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/.pdevel
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export VIRTUALENVWRAPPER_HOOK_DIR=/home/woo/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# GIT ALIASES
+#=====================================================================
+alias g=git
+alias ga='git add'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gl='git pull'
+alias gp='git push'
+alias gst='git status -sb'
+alias gsd='git svn dcommit'
+alias gsr='git svn rebase'
+alias gs='git stash'
+alias gsa='git stash apply'
+alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
+alias gd='git diff | $GIT_EDITOR -'
+alias gmv='git mv'
+alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
+
+
+
+
