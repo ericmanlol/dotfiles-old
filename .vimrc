@@ -698,6 +698,11 @@ endif
 
 "}}}
 
+"trying out some quicker buffer switching:
+nnoremap <silent> <Leader>l :Unite -quick-match buffer<cr>
+"above and below probably do the same thing, but staring at two different articles
+"leave for now, above seems faster at first glance. will backtrack.
+nnoremap <silent> <leader>k :<C-u>Unite -buffer-name=buffers buffer -quick-match<CR>
 
 
 " Unite Sessions {{{
@@ -710,9 +715,9 @@ let g:unite_source_session_enable_auto_save = 1
 " TODO: Why does this not work when Vim isn't run from tmux???!
 autocmd MyAutoCmd VimEnter * call s:unite_session_on_enter()
 function! s:unite_session_on_enter()
-  if !argc() && !exists("g:start_session_from_cmdline")
-    Unite -buffer-name=sessions session
-  endif
+if !argc() && !exists("g:start_session_from_cmdline")
+  Unite -buffer-name=sessions session
+endif
 endfunction
 
 "}}}
@@ -726,23 +731,23 @@ endfunction
 " on the same line when syntax highlight is on.
 " http://briancarper.net/blog/590/cursorcolumn--cursorline-slowdown
 augroup MyAutoCmd
-  " autocmd WinLeave * setlocal nocursorline
-  " autocmd WinEnter,BufRead * setlocal cursorline
+" autocmd WinLeave * setlocal nocursorline
+" autocmd WinEnter,BufRead * setlocal cursorline
 augroup END
 
 function! CursorPing()
-    set cursorline cursorcolumn
-    redraw
-    sleep 200m
-    set nocursorline nocursorcolumn
+  set cursorline cursorcolumn
+  redraw
+  sleep 200m
+  set nocursorline nocursorcolumn
 endfunction
 
 " q quits in certain page types. Don't map esc, that interferes with mouse input
 autocmd MyAutoCmd FileType help,quickrun
-      \ if (!&modifiable || &ft==#'quickrun') |
-      \ nnoremap <silent> <buffer> q :q<cr>|
-      \ nnoremap <silent> <buffer> <esc><esc> :q<cr>|
-      \ endif
+    \ if (!&modifiable || &ft==#'quickrun') |
+    \ nnoremap <silent> <buffer> q :q<cr>|
+    \ nnoremap <silent> <buffer> <esc><esc> :q<cr>|
+    \ endif
 autocmd MyAutoCmd FileType qf nnoremap <silent> <buffer> q :q<CR>
 
 " json = javascript syntax highlight
@@ -750,14 +755,14 @@ autocmd MyAutoCmd FileType json setlocal syntax=javascript
 
 " Enable omni completion
 augroup MyAutoCmd
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-  " autocmd FileType java setlocal omnifunc=eclim#java#complete#CodeComplete
-  autocmd FileType ruby let b:dispatch = 'rspec %'
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+" autocmd FileType java setlocal omnifunc=eclim#java#complete#CodeComplete
+autocmd FileType ruby let b:dispatch = 'rspec %'
 augroup END
 
 " Diff mode settings
@@ -775,7 +780,7 @@ let g:vimshell_prompt = "% "
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 autocmd MyAutoCmd FileType vimshell call s:vimshell_settings()
 function! s:vimshell_settings()
-  call vimshell#altercmd#define('g', 'git')
+call vimshell#altercmd#define('g', 'git')
 endfunction
 
 
@@ -785,22 +790,22 @@ endfunction
 " keys combined with modifiers such as Shift, Control, and Alt.
 " See http://www.reddit.com/r/vim/comments/1a29vk/_/c8tze8p
 if &term =~ '^screen'
-  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
-  execute "set t_kP=\e[5;*~"
-  execute "set t_kN=\e[6;*~"
+" Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+execute "set t_kP=\e[5;*~"
+execute "set t_kN=\e[6;*~"
 
-  " Arrow keys http://unix.stackexchange.com/a/34723
-  execute "set <xUp>=\e[1;*A"
-  execute "set <xDown>=\e[1;*B"
-  execute "set <xRight>=\e[1;*C"
-  execute "set <xLeft>=\e[1;*D"
+" Arrow keys http://unix.stackexchange.com/a/34723
+execute "set <xUp>=\e[1;*A"
+execute "set <xDown>=\e[1;*B"
+execute "set <xRight>=\e[1;*C"
+execute "set <xLeft>=\e[1;*D"
 endif
 
 if &term =~ '256color'
-  " Disable Background Color Erase (BCE) so that color schemes
-  " work properly when Vim is used inside tmux and GNU screen.
-  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
+" Disable Background Color Erase (BCE) so that color schemes
+" work properly when Vim is used inside tmux and GNU screen.
+" See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+set t_ut=
 endif
 
 "}}}
@@ -820,7 +825,7 @@ autocmd MyAutoCmd User PluginScratchInitializeAfter
 \ call s:on_User_plugin_scratch_initialize_after()
 
 function! s:on_User_plugin_scratch_initialize_after()
-  map <buffer> <CR>  <Plug>(scratch-evaluate!)
+map <buffer> <CR>  <Plug>(scratch-evaluate!)
 endfunction
 let g:scratch_show_command = 'hide buffer'
 
@@ -851,18 +856,18 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Make UltiSnips works nicely with YCM
 function! g:UltiSnips_Complete()
-    call UltiSnips_ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips_JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
+  call UltiSnips_ExpandSnippet()
+  if g:ulti_expand_res == 0
+      if pumvisible()
+          return "\<C-n>"
+      else
+          call UltiSnips_JumpForwards()
+          if g:ulti_jump_forwards_res == 0
+              return "\<TAB>"
+          endif
+      endif
+  endif
+  return ""
 endfunction
 
 
@@ -877,11 +882,11 @@ let g:UltiSnipsListSnippets="<c-e>"
 let g:ycm_confirm_extra_conf = 0
 let g:EclimCompletionMethod = 'omnifunc'
 let g:ycm_filetype_blacklist = {
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'text' : 1,
-      \ 'unite' : 1
-      \}
+    \ 'notes' : 1,
+    \ 'markdown' : 1,
+    \ 'text' : 1,
+    \ 'unite' : 1
+    \}
 
 "}}}
 
