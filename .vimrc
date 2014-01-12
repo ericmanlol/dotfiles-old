@@ -150,7 +150,9 @@ let g:indentLine_color_term = 239
 "python
 NeoBundle 'klen/python-mode.git'
 "NeoBundle 'hynek/vim-python-pep8-indent.git'
-NeoBundle 'tell-k/vim-autopep8' "fucking godsend
+"fucking godsend, vim-autopep8 default mapped to <F8>, make sure to
+"pip install autopep8 
+NeoBundle 'tell-k/vim-autopep8' 
 
 filetype plugin indent on
 syntax enable
@@ -271,7 +273,7 @@ set showbreak=↪
 " whitespace. Don't do it for unite windows or readonly files
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-augroup MyaUTOcMd
+augroup MyAutoCmd
   autocmd BufWinEnter * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+$/ | endif
   autocmd InsertEnter * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+\%#\@<!$/ | endif
   autocmd InsertLeave * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+$/ | endif
@@ -702,8 +704,8 @@ endif
 nnoremap <silent> <Leader>l :Unite -quick-match buffer<cr>
 "above and below probably do the same thing, but staring at two different articles
 "leave for now, above seems faster at first glance. will backtrack.
-nnoremap <silent> <leader>k :<C-u>Unite -buffer-name=buffers buffer -quick-match<CR>
-
+"nnoremap <silent> <leader>k :<C-u>Unite -buffer-name=buffers buffer -quick-match<CR>
+"leader k repurposed for python
 
 " Unite Sessions {{{
 "===============================================================================
@@ -901,11 +903,7 @@ let g:ycm_filetype_blacklist = {
 " Python {{{
 "===============================================================================
 "let g:pymode_indent = 0
-"still having multiline issues, switching to https://github.com/hynek/vim-python-pep8-indent
-"disabling klen's indent to try out hynek's
 
-"disabling pymode syntax highlighting in favor of syntastic
-"ref: http://stackoverflow.com/questions/19209139/syntastic-and-python-mode-together
 "let g:pymode_lint = 0
 
 "python-mode configs to play nicely
@@ -914,7 +912,6 @@ let g:ycm_filetype_blacklist = {
 " Enable breakpoints plugin
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_key = 'b'
-"Use <leader>b to add a pdb shortcut (inserts import pdb; pdb.set_trace() ### XXX BREAKPOINT into your code
 
 
 " syntax highlighting
@@ -922,5 +919,15 @@ let g:pymode_syntax = 0
 let g:pymode_syntax_all = 0
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+"running
+let g:pymode_run = 1
+let g:pymode_run_key = 'R'
+
+"autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
+
+" for vim-autopep8
+"let g:autopep8_disable_show_diff=1
+let g:autopep8_ignore="E501,E309"
 "}}}
 
