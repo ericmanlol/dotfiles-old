@@ -15,7 +15,7 @@ Dirty via 10-25-2013
 
 
 Todo: 
-- make a dependency list for quick install
+- make a dependency list for quick install (include a scripted generated list of any external file deps, as I forgot to install autopep8 on my laptop and spent an hour thinking that life no longer made sense when I couldn't autopep8 after doing a pull on mobile :3)
 - integrate the ever elusive sortable taglist by scope to vim [50% done - 11/27/2013]
 - emacs bash key bindings (ctrl+right arrow | ctrl + left arrow) I believe 
 were overwritten by my adventures in urxvt perl extension land. 
