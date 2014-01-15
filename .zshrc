@@ -230,4 +230,9 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 
 
 
+# dir colors (going give solarized a whirl)
+# fyi: https://raw2.github.com/seebi/dircolors-solarized/master/dircolors.256dark
+#=====================================================================
+eval `dircolors /home/woo/.dircolors`
+
 
