@@ -16,18 +16,16 @@ Dirty via 10-25-2013
 
 Todo: 
 - make a dependency list for quick install (include a scripted generated list of any external file deps, as I forgot to install autopep8 on my laptop and spent an hour thinking that life no longer made sense when I couldn't autopep8 after doing a pull on mobile :3)
-- integrate the ever elusive sortable taglist by scope to vim [50% done - 11/27/2013]
 - emacs bash key bindings (ctrl+right arrow | ctrl + left arrow) I believe 
 were overwritten by my adventures in urxvt perl extension land. 
 - copy/paste works fine but I'd like to have a right click menu dammit. 
     - look for/research urxvt right click menu or make one myself. or look into xclip.
-- added my theme to my fork of ohmyzsh [100% done as of 11-27-2013]
-- (contingent) emacs around x-mas time, i hope.
+- (contingent) emacs around spring break time, didn't get a chance during x-mas.
 - drop in some of my irssi configs
-- (11-27-2013) increase tmux-irssi love. [via hotkey settings to auto-resize screen space for nicklist fifo]
-- (11-27-2013) resolve conflicted keybindings for quick vim buffer switches/transitions and awesome/wm layout bindings
-- (11-27-2013) add in my scripts for bootstrapping system-level(userland) things the way I want them.
-- (12-25-2013) add dev branch for unstable changes / experimentation.
+- increase tmux-irssi love. [via hotkey settings to auto-resize screen space for nicklist fifo]
+- resolve conflicted keybindings for quick vim buffer switches/transitions and awesome/wm layout bindings
+- add in my scripts for bootstrapping system-level(userland) things the way I want them.
+- add dev branch for unstable changes / experimentation.
 
 Terminal right now is urxvtd with each new spawned terminal attaching to the
 backgrounded daemon.
@@ -99,7 +97,6 @@ I've switched from dina back to terminus; which is fine by me as I've realized d
 zsh
 ---
 my custom zsh theme can be found in my fork: https://github.com/ericmanlol/oh-my-zsh/blob/master/themes/woo.zsh-theme
-
 
 
 
