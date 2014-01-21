@@ -54,7 +54,7 @@ vim  ~/.dotfilesrc
 ```
 
 4.  Drop this inside .dotfilesrc (be aware of PEP8):
-```
+```python
 [dotfiles]
 repository = ~/Dotfiles
 ignore = [
