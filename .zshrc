@@ -235,4 +235,6 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 #=====================================================================
 eval `dircolors /home/woo/.dircolors`
 
-
+#dircolors on tab completion
+#https://github.com/robbyrussell/oh-my-zsh/issues/1563
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS} 

@@ -21,11 +21,15 @@
 .vim/*
 .config/awesome-*
 .config/awesome/awesome-*
-.config/sublime-text-2/Backup/*
-.config/sublime-text-2/Packages/*
 .config/chromium*
 .config/configstore*
 .sublime/*
+.config/menus*
+.config/*auto*
+.config/st3*
+.config/sublime-text*
+.config/*[Tt]roll*
+.config/qup*
 ############
 
 # Packages #
