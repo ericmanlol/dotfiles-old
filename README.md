@@ -53,10 +53,10 @@ cd ~ && git clone github.com/ericmanlol/dotfiles.git
 vim  ~/.dotfilesrc
 ```
 
-4.  Drop this inside .dotfilesrc:
+4.  Drop this inside .dotfilesrc (be aware of PEP8):
 ```
 [dotfiles]
-repository = ~/dotfiles
+repository = ~/Dotfiles
 ignore = [
     '.git',
     '.gitignore',
