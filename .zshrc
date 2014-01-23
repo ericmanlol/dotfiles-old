@@ -238,3 +238,7 @@ eval `dircolors /home/woo/.dircolors`
 #dircolors on tab completion
 #https://github.com/robbyrussell/oh-my-zsh/issues/1563
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS} 
+
+
+#grunt tab compl
+eval "$(grunt --completion=zsh)"
