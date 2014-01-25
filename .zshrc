@@ -204,8 +204,8 @@ define() {
 #=====================================================================
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/.pdevel
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export VIRTUALENVWRAPPER_HOOK_DIR=/home/woo/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
