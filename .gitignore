@@ -6,6 +6,7 @@
 *.PyCharm*
 *.macro*
 *.bash_history
+*.zsh_history
 .virtualenvs
 .wingide4
 .ssh
@@ -30,6 +31,7 @@
 .config/sublime-text*
 .config/*[Tt]roll*
 .config/qup*
+.config/*gtk*
 ############
 
 # Packages #

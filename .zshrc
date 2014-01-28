@@ -1,12 +1,30 @@
 #github.com/ericmanlol/dotfiles
+#oh-my-zsh:
 #https://github.com/robbyrussell/oh-my-zsh
 #
+#my custom oh-my-zsh theme: woo.zsh.theme
+#https://github.com/ericmanlol/oh-my-zsh
+#https://github.com/ericmanlol/oh-my-zsh/themes/woo.zsh.theme
 #
 #based on gourmet copypasta from the net + rapid retard style trial and error
 #
 
 
+#completion:
+autoload -U compinit
+compinit
 
+#double tizab for menu select
+zstyle ':completion:*' menu select
+
+#bindkey to ncurses app
+#ncmpcppShow() { BUFFER="ncmpcpp"; zle accept-line; }
+#zle -N ncmpcppShow
+#bindkey '^[\' ncmpcppShow
+
+#history 
+[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
+[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
 
 # Path to my oh-my-zsh fork
@@ -31,9 +49,6 @@ ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~"
 #ZSH_THEME="duellj"
 #ZSH_THEME="alanpeabody"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -88,27 +103,24 @@ if [ -z $HISTFILE ]; then
 fi
 HISTSIZE=10000
 SAVEHIST=10000
+EXTENDED_HISTORY=1
+HIST_EXPIRE_DUPS_FIRST=1
+
 
 # do i need to explicitly declare this still? with inc_append_history set? humm
-setopt append_history
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_verify
+
+#setopt extended_history
+#setopt hist_expire_dups_first
+#setopt hist_verify
 # Appends every command to the history file once it is executed
-setopt inc_append_history
+#setopt inc_append_history
 # Reloads the history whenever you use it
-setopt share_history
+#setopt share_history
 
+# Grep the history with 'h'
+h () { history 0 | grep $1 }
+hi () { history | grep -i $1 }
 
-
-## Completion Settings
-######################
-
-unsetopt menu_complete   # do not autoselect the first completion entry
-unsetopt flowcontrol
-setopt auto_menu         # show completion menu on succesive tab press
-setopt complete_in_word
-setopt always_to_end
 
 
 ## Misc
@@ -127,6 +139,7 @@ setopt long_list_jobs
 
 
 # extract function
+# deprecated a bit due to -xvf being magical
 #=====================================================================
 extract() {
   if [[ -f $1 ]]; then
@@ -215,7 +228,6 @@ alias g=git
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
-alias gc='git commit -v'
 alias gl='git pull'
 alias gp='git push'
 alias gst='git status -sb'
@@ -228,7 +240,9 @@ alias gd='git diff | $GIT_EDITOR -'
 alias gmv='git mv'
 alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
 
-
+#commits gc(x);
+alias gcm='git commit -m'
+alias gc='git commit -v'
 
 # dir colors (going give solarized a whirl)
 # fyi: https://raw2.github.com/seebi/dircolors-solarized/master/dircolors.256dark
@@ -242,3 +256,15 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 #grunt tab compl
 eval "$(grunt --completion=zsh)"
+
+
+
+#ruby aliases
+#=====================================================================
+alias b="bundle"
+alias rk='rake'
+alias m='migrate'
+
+#general/misc aliases
+#=====================================================================
+alias ll='ls -alh'
