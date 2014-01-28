@@ -93,6 +93,7 @@ The previous step will install all my bundled vim plugins/colors and such
 Note: For powerline/airline please be aware you will have to either patch your fonts or use one of the patched fonts.
 I've switched from dina back to terminus; which is fine by me as I've realized dina is xft/AA. 
 
+Double Note: I did include a build script for the flags I run when compiling from source. :)
 
 zsh
 ---
