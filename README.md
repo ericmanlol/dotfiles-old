@@ -11,7 +11,8 @@ Clean via 10-25-2013:
 Dirty via 10-25-2013
 ![ss](http://i.imgur.com/M6Qjnff.png)
 
-
+Soon:
+- Since switching completely to zsh, prepping for entire zsh overhaul, segregated functions, etc.
 
 
 Todo: 
