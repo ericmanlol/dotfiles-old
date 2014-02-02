@@ -13,18 +13,15 @@ Dirty via 10-25-2013
 
 Soon:
 - Since switching completely to zsh, prepping for entire zsh overhaul, segregated functions, etc.
+- drop in some of my irssi configs
+- increase tmux-irssi love. [via hotkey settings to auto-resize screen space for nicklist fifo]
 
 
 Todo: 
 - make a dependency list for quick install (include a scripted generated list of any external file deps, as I forgot to install autopep8 on my laptop and spent an hour thinking that life no longer made sense when I couldn't autopep8 after doing a pull on mobile :3)
-- emacs bash key bindings (ctrl+right arrow | ctrl + left arrow) I believe 
-were overwritten by my adventures in urxvt perl extension land. 
 - copy/paste works fine but I'd like to have a right click menu dammit. 
     - look for/research urxvt right click menu or make one myself. or look into xclip.
 - (contingent) emacs around spring break time, didn't get a chance during x-mas.
-- drop in some of my irssi configs
-- increase tmux-irssi love. [via hotkey settings to auto-resize screen space for nicklist fifo]
-- resolve conflicted keybindings for quick vim buffer switches/transitions and awesome/wm layout bindings
 - add in my scripts for bootstrapping system-level(userland) things the way I want them.
 - add dev branch for unstable changes / experimentation.
 
