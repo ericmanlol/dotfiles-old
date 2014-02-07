@@ -92,8 +92,8 @@ local layouts = {
 
 -- {{{ Tags
 tags = {
-   names = { "web", "term", "ide", "vim", "dev", "other" },
-   layout = { layouts[1], layouts[3], layouts[4], layouts[1], layouts[7], layouts[1] }
+   names = { "web", "multi", "[full-ide]", "[partial-ide]", "[vim]", "dev", "other" },
+   layout = { layouts[1], layouts[3], layouts[4], layouts[3], layouts[1], layouts[7], layouts[1] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
@@ -479,6 +479,9 @@ globalkeys = awful.util.table.join(
     awful.key({ altkey, "Shift"   }, "l",      function () awful.tag.incmwfact( 0.05)     end),
     awful.key({ altkey, "Shift"   }, "h",      function () awful.tag.incmwfact(-0.05)     end),
     awful.key({ modkey, "Shift"   }, "l",      function () awful.tag.incnmaster(-1)       end),
+    
+    awful.key({ altkey, "Shift"   }, "j",      function () awful.client.incwfact( 0.05)     end),
+    awful.key({ altkey, "Shift"   }, "k",      function () awful.client.incwfact(-0.05)     end),
     awful.key({ modkey, "Shift"   }, "h",      function () awful.tag.incnmaster( 1)       end),
     awful.key({ modkey, "Control" }, "l",      function () awful.tag.incncol(-1)          end),
     awful.key({ modkey, "Control" }, "h",      function () awful.tag.incncol( 1)          end),
