@@ -82,12 +82,16 @@ ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~"
 
 plugins=(git zsh-syntax-highlighting)
 
+
+##envs/jails
 source $ZSH/oh-my-zsh.sh
 
 source /home/woo/.nvm/nvm.sh
 
-source /home/woo/.rvm/scripts/rvm
-# Customize to your needs...
+#source /home/woo/.rvm/scripts/rvm
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+#
 
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
