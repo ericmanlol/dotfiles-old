@@ -32,6 +32,8 @@
 .config/*[Tt]roll*
 .config/qup*
 .config/*gtk*
+.conig/yarpen.cz
+.config/*/*sql*
 ############
 
 # Packages #
