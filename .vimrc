@@ -42,7 +42,7 @@ NeoBundle 'mileszs/ack.vim'
 "NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'Shougo/neocomplete'
 "testing emmet on vim
-"NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mattn/emmet-vim'
 
 "}}}
 
@@ -141,7 +141,7 @@ NeoBundle 'koron/nyancat-vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'ton/vim-bufsurf'
 NeoBundle 'terryma/vim-smooth-scroll'
-"NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
 let g:indentLine_color_term = 239
 
@@ -244,7 +244,7 @@ set nocompatible
 "colorscheme Tomorrow-Night
 "colorscheme jellybeans
 let g:hybrid_use_Xresources = 1
-"colorscheme hybrid
+colorscheme hybrid
 "colorscheme cottonmouse
 
 
@@ -883,22 +883,26 @@ let g:UltiSnipsListSnippets="<c-e>"
 " YCM {{{
 "===============================================================================
 
-let g:ycm_confirm_extra_conf = 0
-let g:EclimCompletionMethod = 'omnifunc'
-let g:ycm_filetype_blacklist = {
-    \ 'notes' : 1,
-    \ 'markdown' : 1,
-    \ 'text' : 1,
-    \ 'unite' : 1
-    \}
+"let g:ycm_confirm_extra_conf = 0
+"let g:EclimCompletionMethod = 'omnifunc'
+"let g:ycm_filetype_blacklist = {
+"   \ 'notes' : 1,
+"   \ 'markdown' : 1,
+"   \ 'text' : 1,
+"   \ 'unite' : 1
+"   \}
 
 "}}}
 
 "Emmet {{{
 "let g:user_emmet_leader_key = '<c-s>'
-
-
-
+let g:use_emmet_complete_tag = 1
+"let g:user_emmet_expandabbr_key = '<cy>'
+let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+let g:user_emmet_mode='a'    "enable all function in all mode.
+"let g:user_emmet_leader_key = '<c-q>'
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,css EmmetInstall
 "}}}
 
 
