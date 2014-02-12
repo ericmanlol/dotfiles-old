@@ -39,8 +39,8 @@ NeoBundle 'mileszs/ack.vim'
 "============================================================================
 "NeoBundle'Shougo/neocomplcache'
 "NeoBundle 'vim-scripts/AutoComplPop'
-NeoBundle 'Valloric/YouCompleteMe'
-"NeoBundle 'Shougo/neocomplete'
+"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Shougo/neocomplete'
 "testing emmet on vim
 "NeoBundle 'mattn/emmet-vim'
 
@@ -244,7 +244,9 @@ set nocompatible
 "colorscheme Tomorrow-Night
 "colorscheme jellybeans
 let g:hybrid_use_Xresources = 1
-colorscheme hybrid
+"colorscheme hybrid
+"colorscheme cottonmouse
+
 
 " Explicitly set encoding to utf-8
 set encoding=utf-8
