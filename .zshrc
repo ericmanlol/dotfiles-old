@@ -273,3 +273,8 @@ alias m='migrate'
 #general/misc aliases
 #=====================================================================
 alias ll='ls -alh'
+
+
+#avoiding the 'screen-256color' unknown terminal type
+#=====================================================================
+alias ssh='TERM=xterm ssh'
