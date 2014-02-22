@@ -154,6 +154,8 @@ NeoBundle 'klen/python-mode.git'
 "pip install autopep8 
 NeoBundle 'tell-k/vim-autopep8' 
 
+
+
 filetype plugin indent on
 syntax enable
 
@@ -180,6 +182,9 @@ set whichwrap+=h,l,<,>,[,]
 
 "testing a +1 cc
 "set cc=120
+
+" Give one virtual space at end of line
+set virtualedit=onemore
 
 "256bit terminal
 set t_Co=256
@@ -347,15 +352,9 @@ endtry
 
 " Cursor settings. This makes terminal vim sooo much nicer!
 " Tmux will only forward escape sequences to the terminal if surrounded by a DCS
-" sequence
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+" sequence.
 
+" temp removed
 
 
 "}}}
@@ -936,4 +935,11 @@ let g:pymode_run_key = 'R'
 "let g:autopep8_disable_show_diff=1
 let g:autopep8_ignore="E501,E309"
 "}}}
+
+
+
+
+
+"to research further and eventually integrate if all goes according to plan
+"https://github.com/ivanov/vim-ipython
 
