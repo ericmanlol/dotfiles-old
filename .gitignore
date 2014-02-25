@@ -35,6 +35,7 @@
 .conig/yarpen.cz
 .config/*/*sql*
 .config/dwb*
+.config/ipython*
 ############
 
 # Packages #
