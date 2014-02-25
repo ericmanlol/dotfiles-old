@@ -34,6 +34,7 @@
 .config/*gtk*
 .conig/yarpen.cz
 .config/*/*sql*
+.config/dwb*
 ############
 
 # Packages #
