@@ -36,6 +36,7 @@
 .config/*/*sql*
 .config/dwb*
 .config/ipython*
+.config/awesome/lain
 ############
 
 # Packages #

@@ -232,7 +232,7 @@ alias g=git
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
-alias gl='git pull'
+#alias gl='git pull'
 alias gp='git push'
 alias gpom='git push origin master'
 alias gst='git status -sb'
@@ -279,4 +279,7 @@ alias ll='ls -alh'
 #=====================================================================
 alias ssh='TERM=xterm ssh'
 
-#git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+
+
+alias fuckitYOLO='git commit -am "DEAL WITH IT" && git push -f origin master'
