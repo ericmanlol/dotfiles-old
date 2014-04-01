@@ -438,7 +438,7 @@ nnoremap <Leader>cd :cd %:p:h<cr>:pwd<cr>
 "}}}
 
 
-" Command-line Mode Key Mappings {{{
+" Command-line/Normal Mode Key Mappings {{{
 "===============================================================================
 
 " Bash like keys for the command line. These resemble personal zsh mappings
@@ -446,6 +446,8 @@ cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 
 
+"godly toggling of comments
+nmap \ <Leader>c<space>
 
 
 "}}}
@@ -500,6 +502,19 @@ nnoremap  :keepjumps normal ggVG<CR>
 nnoremap <silent> h :bprevious<CR>
 
 "}}}
+
+
+" Visual Key Mappings {{{
+"===============================================================================
+
+"Comment/Uncomment Toggle of the gods..
+xmap \ <Leader>c<space>
+
+"}}}
+
+
+
+
 
 " Fugitive{{{
 "============================================================================
@@ -947,3 +962,13 @@ let g:autopep8_ignore="E501,E309"
 
 "to research further and eventually integrate if all goes according to plan
 "https://github.com/ivanov/vim-ipython
+
+
+
+" Nerdcommenter {{{
+"===============================================================================
+
+" Leaves a space between comment character and comment
+let NERDSpaceDelims=1
+
+"}}}
