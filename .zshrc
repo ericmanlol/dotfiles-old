@@ -283,3 +283,5 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 
 alias fuckitYOLO='git commit -am "DEAL WITH IT" && git push -f origin master'
+
+alias sc='systemctl'
