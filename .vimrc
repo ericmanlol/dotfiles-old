@@ -412,7 +412,7 @@ nnoremap <silent> <Leader><tab> :NERDTreeToggle<cr>
 nnoremap <Leader>, <C-w>p
 
 " <Leader>e: Fast editing of the .vimrc
-nnoremap <Leader>e :e! ~/.dotfiles/.vimrc<cr>
+nnoremap <Leader>e :e! ~/dotfiles/.vimrc<cr>
 
 " <Leader>w: Close current buffer
 nnoremap <Leader>w :bdelete<cr>
@@ -448,6 +448,30 @@ cnoremap <c-e> <end>
 
 "godly toggling of comments
 nmap \ <Leader>c<space>
+
+
+
+" Ctrl-Space: Quick scratch buffer
+nmap <C-@> <Plug>(scratch-open)
+nmap <C-Space> <C-@>
+
+
+
+
+
+" Shift-Tab: NERDTree
+nnoremap <silent> <S-Tab> :NERDTreeToggle<CR>
+
+" Q: Closes the window
+nnoremap Q :q<cr>
+
+" W: Save
+nnoremap W :w<cr>
+
+" E: Move to end of word forward
+
+" R: Reindent entire file
+nnoremap R mqHmwgg=G`wzt`q
 
 
 "}}}
