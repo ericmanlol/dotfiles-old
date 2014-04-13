@@ -266,12 +266,14 @@ eval "$(grunt --completion=zsh)"
 
 #ruby aliases
 #=====================================================================
-alias b="bundle"
-alias rk='rake'
-alias m='migrate'
+# alias b="bundle"
+# alias rk='rake'
+# alias m='migrate'
+
 
 #general/misc aliases
 #=====================================================================
+alias ls='ls --color=always'
 alias ll='ls -alh'
 
 
