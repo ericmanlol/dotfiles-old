@@ -1,0 +1,45 @@
+set nocompatible
+syntax on
+filetype plugin indent on
+set autoindent
+" set lazyredraw
+" " set fcs=vert:│
+" " set mouse=a
+" " set number
+" " set t_Co=256
+" " set background=dark
+" " set history=10000
+" " set list
+" " set listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:␣
+" " set showbreak=↪
+" " set scrolloff=10
+" " set numberwidth=1
+" " set completeopt=longest,menuone
+" " set wildmode=list:longest,full
+" " set hidden
+" " set backspace=eol,start,indent
+" " set ignorecase
+" " set smartcase
+" " set incsearch
+" " set magic
+" " set noshowmatch
+" " set vb
+" " set t_vb=
+" " set laststatus=2
+" " set encoding=utf-8
+" " set timeout timeoutlen=1000 ttimeoutlen=0
+" " set nobackup
+" " set nowritebackup
+" " set noswapfile
+" " set expandtab
+" " set shiftwidth=2
+" " set tabstop=8
+" " set softtabstop=2
+" " set smarttab
+" " set linebreak
+" " set textwidth=80
+" " set autoindent
+" " set nowrap
+" " set whichwrap+=h,l,<,>,[,]
+" " set virtualedit=onemore
+" " set virtualedit=all

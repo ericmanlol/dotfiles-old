@@ -239,8 +239,6 @@ alias gpom='git push origin master'
 alias gpu='git push -u'
 
 alias gst='git status -sb'
-alias gsd='git svn dcommit'
-alias gsr='git svn rebase'
 alias gs='git stash'
 alias gsa='git stash apply'
 alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
@@ -278,6 +276,10 @@ eval "$(grunt --completion=zsh)"
 #=====================================================================
 alias ls='ls --color=always'
 alias ll='ls -alh'
+alias svim='vim -u ~/.vimrc_simple'
+alias psef='ps -ef | grep'
+alias psg='ps -ef | grep -i'
+alias nspln='netstat -plaunt'
 
 
 #avoiding the 'screen-256color' unknown terminal type
