@@ -95,14 +95,15 @@ NeoBundle 'tpope/vim-dispatch'
 "============================================================================
 " NeoBundle 'rstacruz/sparkup', {'rtp': 'vim'} "HTML
 NeoBundle 'amirh/HTML-AutoCloseTag'
+" NeoBundle 'Townk/vim-autoclose' "testing 4-7-2014
 NeoBundle 'tpope/vim-markdown' "Markdown
 NeoBundle 'terryma/vim-instant-markdown' "Markdown
-NeoBundle 'vim-ruby/vim-ruby' "Ruby
-NeoBundle 'tpope/vim-rails'
+" NeoBundle 'vim-ruby/vim-ruby' "Ruby
+" NeoBundle 'tpope/vim-rails'
 "NeoBundle 'psykidellic/vim-jekyll' "Jekyll
-NeoBundle 'kchmck/vim-coffee-script' "CoffeeScript
+" NeoBundle 'kchmck/vim-coffee-script' "CoffeeScript
 NeoBundle 'Chiel92/vim-autoformat'
-NeoBundle 'tpope/vim-endwise'
+" NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tsaleh/vim-matchit'
 
 "}}}
@@ -895,31 +896,31 @@ let g:instant_markdown_autostart = 0
 
 " UltiSnips {{{
 "===============================================================================
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 
-" Make UltiSnips works nicely with YCM
-function! g:UltiSnips_Complete()
-  call UltiSnips_ExpandSnippet()
-  if g:ulti_expand_res == 0
-      if pumvisible()
-          return "\<C-n>"
-      else
-          call UltiSnips_JumpForwards()
-          if g:ulti_jump_forwards_res == 0
-              return "\<TAB>"
-          endif
-      endif
-  endif
-  return ""
-endfunction
+" " Make UltiSnips works nicely with YCM
+" function! g:UltiSnips_Complete()
+  " call UltiSnips_ExpandSnippet()
+  " if g:ulti_expand_res == 0
+      " if pumvisible()
+          " return "\<C-n>"
+      " else
+          " call UltiSnips_JumpForwards()
+          " if g:ulti_jump_forwards_res == 0
+              " return "\<TAB>"
+          " endif
+      " endif
+  " endif
+  " return ""
+" endfunction
 
 
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsListSnippets="<c-e>"
+" au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+" let g:UltiSnipsListSnippets="<c-e>"
 
 "}}}
 
@@ -939,13 +940,17 @@ let g:UltiSnipsListSnippets="<c-e>"
 
 "Emmet {{{
 "let g:user_emmet_leader_key = '<c-s>'
-let g:use_emmet_complete_tag = 1
 "let g:user_emmet_expandabbr_key = '<cy>'
-let g:user_emmet_mode='inv'  "enable all functions, which is equal to
-let g:user_emmet_mode='a'    "enable all function in all mode.
 "let g:user_emmet_leader_key = '<c-q>'
 "let g:user_emmet_install_global = 0
 "autocmd FileType html,css EmmetInstall
+
+
+"temp disabled
+" let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+" let g:user_emmet_mode='a'    "enable all function in all mode.
+" let g:use_emmet_complete_tag = 1
+
 "}}}
 
 
@@ -994,5 +999,34 @@ let g:autopep8_ignore="E501,E309"
 
 " Leaves a space between comment character and comment
 let NERDSpaceDelims=1
+
+"}}}
+
+
+
+" DelimitMate {{{
+"===============================================================================
+
+autocmd MyAutoCmd FileType vim let b:delimitMate_quotes = "'"
+
+
+" let g:delimitMate_autoclose = 1
+" let delimitMate_expand_cr = 1
+
+let delimitMate_autoclose = 1
+let delimitMate_matchpairs = "(:),[:],{:},<:>"
+let delimitMate_expand_space = 0
+" let delimitMate_quotes = "\" ' ` *"
+
+"}}}
+
+
+
+"testing {{{
+
+"===============================================================================
+
+let g:AutoClosePairs = "() {} \""
+
 
 "}}}
