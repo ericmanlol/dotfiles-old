@@ -37,10 +37,10 @@ NeoBundle 'mileszs/ack.vim'
 
 "Code completion {{{
 "============================================================================
-" NeoBundle'Shougo/neocomplcache'
+NeoBundle'Shougo/neocomplcache'
 "NeoBundle 'vim-scripts/AutoComplPop'
 "NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'Shougo/neocomplete'
+" NeoBundle 'Shougo/neocomplete'
 "testing emmet on vim
 NeoBundle 'mattn/emmet-vim'
 
@@ -217,7 +217,7 @@ set smartcase
 set incsearch
 
 "also hotkeyed to leader + 1
-set paste
+" set paste
 
 
 set noanti
@@ -1022,11 +1022,45 @@ let delimitMate_expand_space = 0
 
 
 
-"testing {{{
+"neocomplcache {{{
 
 "===============================================================================
 
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length=3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\'
+
+
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplcache#smart_close_popup() . "\<CR>"
+    " For no inserting <CR> key.
+      "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+endfunction
+
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+
+"}}}
+
+
+"testing {{{
+
+"===============================================================================
 let g:AutoClosePairs = "() {} \""
 
 
 "}}}
+
+
+
+
