@@ -232,9 +232,12 @@ alias g=git
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
+alias gbv='git branch -v'
 #alias gl='git pull'
 alias gp='git push'
 alias gpom='git push origin master'
+alias gpu='git push -u'
+
 alias gst='git status -sb'
 alias gsd='git svn dcommit'
 alias gsr='git svn rebase'
