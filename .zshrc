@@ -1,12 +1,8 @@
 #github.com/ericmanlol/dotfiles
-#oh-my-zsh:
-#https://github.com/robbyrussell/oh-my-zsh
 #
 #my custom oh-my-zsh theme: woo.zsh.theme
 #https://github.com/ericmanlol/oh-my-zsh
 #https://github.com/ericmanlol/oh-my-zsh/themes/woo.zsh.theme
-#
-#based on gourmet copypasta from the net + rapid retard style trial and error
 #
 
 
