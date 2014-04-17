@@ -288,3 +288,13 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 alias fuckitYOLO='git commit -am "DEAL WITH IT" && git push -f origin master'
 
 alias sc='systemctl'
+
+buf () {
+    oldname=$1; 
+    if [ "$oldname" != "" ]; 
+    then datepart=$(date +%Y-%m-%d); 
+    firstpart=`echo $oldname | cut -d "." -f 1`; 
+    newname=`echo $oldname | sed s/$firstpart/$firstpart.$datepart/`; 
+    cp -i ${oldname} ${newname}; 
+    fi 
+}
