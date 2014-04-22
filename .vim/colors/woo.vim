@@ -62,7 +62,7 @@ if ( &t_Co >= 255 || $TERM =~? "256color" )
   hi StorageClass   term=none cterm=none ctermfg=249  ctermbg=none
   hi String         term=none cterm=none ctermfg=249  ctermbg=none
   hi Structure      term=none cterm=none ctermfg=229  ctermbg=none
-  hi TabLine        term=none cterm=none ctermfg=238  ctermbg=235
+  hi TabLine        term=none cterm=none ctermfg=238  ctermbg=none
   hi TabLineFill    term=none cterm=none ctermfg=238  ctermbg=235
   hi TabLineSel     term=none cterm=none ctermfg=243  ctermbg=233
   hi Tag            term=none cterm=none ctermfg=108  ctermbg=none
