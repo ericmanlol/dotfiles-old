@@ -19,7 +19,9 @@
 *.viminfo
 .vboxclient*
 .java
-.vim/*
+.vim/bundle*
+.vim/vim-powerline*
+.vim/.*
 .config/awesome-*
 .config/awesome/awesome-*
 .config/chromium*
