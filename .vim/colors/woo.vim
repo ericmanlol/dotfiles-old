@@ -1,20 +1,16 @@
-" Vim color file
-" Author:       milomouse <vincent[at]fea.st>
-" Maintainer:   milomouse <vincent[at]fea.st>
-" Created:      2010-xx-xx
-" Last Change:  2013-08-01
-" Colorful yet muted
-" Designed for 256-color console
+"Woo Theme
+"Inception 4-21-2014
+"Work in progress
 
 set background=dark
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name="cottonmouse"
+let g:colors_name="woo"
 
 if ( &t_Co >= 255 || $TERM =~? "256color" )
-  hi Normal         term=none cterm=none ctermfg=59   ctermbg=233
+  hi Normal         term=none cterm=none ctermfg=59   ctermbg=none
   hi Boolean        term=none cterm=none ctermfg=132  ctermbg=none
   hi Character      term=none cterm=none ctermfg=60   ctermbg=none
   hi Comment        term=none cterm=none ctermfg=238  ctermbg=234
