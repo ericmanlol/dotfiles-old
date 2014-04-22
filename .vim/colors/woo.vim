@@ -18,7 +18,7 @@ if ( &t_Co >= 255 || $TERM =~? "256color" )
   hi Constant       term=none cterm=none ctermfg=60   ctermbg=none
   hi Cursor         term=none cterm=none ctermfg=232  ctermbg=109
   hi CursorLine     term=none cterm=none ctermfg=none ctermbg=234
-  hi CursorLineNr   term=none cterm=none ctermfg=132  ctermbg=234
+  " hi CursorLineNr   term=none cterm=none ctermfg=132  ctermbg=none
   hi CursorColumn   term=none cterm=none ctermfg=none ctermbg=234
   hi Debug          term=none cterm=none ctermfg=181  ctermbg=none
   hi Define         term=none cterm=none ctermfg=97   ctermbg=none
@@ -40,11 +40,12 @@ if ( &t_Co >= 255 || $TERM =~? "256color" )
   hi Keyword        term=none cterm=none ctermfg=97   ctermbg=none
   hi Label          term=none cterm=none ctermfg=187  ctermbg=none
   hi LineNr         term=none cterm=none ctermfg=235  ctermbg=233
+  " hi LineNr         term=none cterm=none ctermfg=235  ctermbg=234
   hi MatchParen     term=none cterm=none ctermfg=235  ctermbg=132
   hi Macro          term=none cterm=none ctermfg=99   ctermbg=none
   hi ModeMsg        term=none cterm=none ctermfg=132  ctermbg=none
   hi MoreMsg        term=none cterm=none ctermfg=60   ctermbg=none
-  hi NonText        term=none cterm=none ctermfg=237  ctermbg=234
+  hi NonText        term=none cterm=none ctermfg=237  ctermbg=none
   hi Number         term=none cterm=none ctermfg=110  ctermbg=none
   hi Operator       term=none cterm=none ctermfg=38   ctermbg=none
   hi PreCondit      term=none cterm=none ctermfg=180  ctermbg=none
@@ -62,7 +63,7 @@ if ( &t_Co >= 255 || $TERM =~? "256color" )
   hi StorageClass   term=none cterm=none ctermfg=249  ctermbg=none
   hi String         term=none cterm=none ctermfg=249  ctermbg=none
   hi Structure      term=none cterm=none ctermfg=229  ctermbg=none
-  hi TabLine        term=none cterm=none ctermfg=238  ctermbg=none
+  hi TabLine        term=none cterm=none ctermfg=238  ctermbg=235
   hi TabLineFill    term=none cterm=none ctermfg=238  ctermbg=235
   hi TabLineSel     term=none cterm=none ctermfg=243  ctermbg=233
   hi Tag            term=none cterm=none ctermfg=108  ctermbg=none
