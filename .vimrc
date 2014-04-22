@@ -250,8 +250,10 @@ set nocompatible
 "colorscheme Tomorrow-Night
 "colorscheme jellybeans
 let g:hybrid_use_Xresources = 1
-colorscheme hybrid
+" colorscheme hybrid
 "colorscheme cottonmouse
+
+colorscheme woo
 
 
 " Explicitly set encoding to utf-8
