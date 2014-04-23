@@ -11,6 +11,9 @@ Clean via 10-25-2013:
 Dirty via 10-25-2013
 ![ss](http://i.imgur.com/M6Qjnff.png)
 
+Work in Progress - 4-22-2014
+![ss](http://ericman.com/s/newsetup.png)
+
 Soon:
 - Since switching completely to zsh, prepping for entire zsh overhaul, segregated functions, etc.
 - drop in some of my irssi configs
