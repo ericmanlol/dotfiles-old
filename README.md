@@ -12,7 +12,7 @@ Dirty via 10-25-2013
 ![ss](http://i.imgur.com/M6Qjnff.png)
 
 Work in Progress - 4-23-2014
-![ss](http://ericman.com/s/dat_new_setup.png)
+![ss](http://ericman.com/s/dat_sneak_preview.png)
 
 Soon:
 - Since switching completely to zsh, prepping for entire zsh overhaul, segregated functions, etc.
