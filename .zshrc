@@ -281,7 +281,7 @@ alias nspln='netstat -plaunt'
 
 #python
 #=====================================================================
-ipython --profile='woo' 
+alias ipy='ipython --profile='woo''
 
 
 #avoiding the 'screen-256color' unknown terminal type
