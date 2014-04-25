@@ -49,9 +49,9 @@ NeoBundle 'mattn/emmet-vim'
 " Snippets {{{
 "============================================================================
 " NeoBundle 'Shougo/neosnippet'
-" NeoBundle 'honza/vim-snippets'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'SirVer/ultisnips'
-" NeoBundle 'JazzCore/neocomplcache-ultisnips'
+NeoBundle 'JazzCore/neocomplcache-ultisnips'
 
 "}}}
 
@@ -150,7 +150,7 @@ let g:indentLine_color_term = 239
 
 "python
 NeoBundle 'klen/python-mode.git'
-"NeoBundle 'hynek/vim-python-pep8-indent.git'
+NeoBundle 'hynek/vim-python-pep8-indent.git'
 "fucking godsend, vim-autopep8 default mapped to <F8>, make sure to
 "pip install autopep8 
 NeoBundle 'tell-k/vim-autopep8' 
@@ -179,7 +179,6 @@ set textwidth=80
 set wrap
 set whichwrap+=h,l,<,>,[,]
 
-"set textwidth=80
 
 "testing a +1 cc
 "set cc=120
@@ -203,7 +202,7 @@ set smarttab
 set expandtab
 
 set backspace=indent,eol,start
-set nosmartindent
+" set nosmartindent
 "set smartindent
 
 
@@ -898,31 +897,31 @@ let g:instant_markdown_autostart = 0
 
 " UltiSnips {{{
 "===============================================================================
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+" Make UltiSnips works nicely with YCM
+function! g:UltiSnips_Complete()
+  call UltiSnips#ExpandSnippet()
+  if g:ulti_expand_res == 0
+      if pumvisible()
+          return "\<C-n>"
+      else
+          call UltiSnips_JumpForwards()
+          if g:ulti_jump_forwards_res == 0
+              return "\<TAB>"
+          endif
+      endif
+  endif
+  return ""
+endfunction
 
 
 
-" " Make UltiSnips works nicely with YCM
-" function! g:UltiSnips_Complete()
-  " call UltiSnips_ExpandSnippet()
-  " if g:ulti_expand_res == 0
-      " if pumvisible()
-          " return "\<C-n>"
-      " else
-          " call UltiSnips_JumpForwards()
-          " if g:ulti_jump_forwards_res == 0
-              " return "\<TAB>"
-          " endif
-      " endif
-  " endif
-  " return ""
-" endfunction
-
-
-" au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-" let g:UltiSnipsListSnippets="<c-e>"
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsListSnippets="<c-e>"
 
 "}}}
 
@@ -958,7 +957,7 @@ let g:instant_markdown_autostart = 0
 
 " Python {{{
 "===============================================================================
-"let g:pymode_indent = 0
+" let g:pymode_indent = 0
 
 "let g:pymode_lint = 0
 
@@ -980,11 +979,22 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_run = 1
 let g:pymode_run_key = 'R'
 
+
+let g:pymode_warnings = 0
+
+let g:pymode_trim_whitespaces = 1
+" let g:pymode_python = '/usr/local/bin/python'
+
+
+let g:pymode_virtualenv = 1
+let g:pymode_virtualenv_path = $VIRTUAL_ENV
+
 "autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
 
 " for vim-autopep8
 "let g:autopep8_disable_show_diff=1
-let g:autopep8_ignore="E501,E309"
+let g:autopep8_ignore="E309"
+let g:autopep8_max_line_length=79
 "}}}
 
 
