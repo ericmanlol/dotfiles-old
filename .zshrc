@@ -279,6 +279,11 @@ alias psg='ps -ef | grep -i'
 alias nspln='netstat -plaunt'
 
 
+#python
+#=====================================================================
+ipython --profile='woo' 
+
+
 #avoiding the 'screen-256color' unknown terminal type
 #=====================================================================
 alias ssh='TERM=xterm ssh'
@@ -286,9 +291,12 @@ alias ssh='TERM=xterm ssh'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
 
-alias fuckitYOLO='git commit -am "DEAL WITH IT" && git push -f origin master'
+alias fuckitYOLO='git commit -am "DEAL WITH IT (trolling, not serious)" && git push -f origin master'
 
 alias sc='systemctl'
+
+
+
 
 buf () {
     oldname=$1; 
