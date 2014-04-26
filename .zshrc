@@ -230,13 +230,13 @@ alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbv='git branch -v'
-#alias gl='git pull'
+
 alias gp='git push'
 alias gpom='git push origin master'
 alias gpu='git push -u'
 
 alias gst='git status -sb'
-alias gs='git stash'
+alias gs='git status'
 alias gsa='git stash apply'
 alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
 alias gd='git diff | $GIT_EDITOR -'
@@ -246,6 +246,11 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 #commits gc(x);
 alias gcm='git commit -m'
 alias gc='git commit -v'
+
+# git log color hotness
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+
+
 
 # dir colors (going give solarized a whirl)
 # fyi: https://raw2.github.com/seebi/dircolors-solarized/master/dircolors.256dark
@@ -287,8 +292,6 @@ alias ipy='ipython --profile='woo''
 #avoiding the 'screen-256color' unknown terminal type
 #=====================================================================
 alias ssh='TERM=xterm ssh'
-
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
 
 alias fuckitYOLO='git commit -am "DEAL WITH IT (trolling, not serious)" && git push -f origin master'
