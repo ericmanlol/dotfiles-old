@@ -216,7 +216,8 @@ set smartcase
 set incsearch
 
 "also hotkeyed to leader + 1
-set paste
+" set paste
+"^disabled atm because neocomplcache auto disables if set paste is detected
 
 
 set noanti
