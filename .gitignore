@@ -3,6 +3,7 @@
 *.pyc
 *.cache
 *.dbus
+*pudb*
 *.PyCharm*
 *.macro*
 *.bash_history

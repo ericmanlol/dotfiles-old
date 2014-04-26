@@ -216,7 +216,7 @@ set smartcase
 set incsearch
 
 "also hotkeyed to leader + 1
-" set paste
+set paste
 
 
 set noanti
@@ -525,7 +525,10 @@ nnoremap  :keepjumps normal ggVG<CR>
 
 
 "alt+h go back to previous buffer
-nnoremap <silent> h :bprevious<CR>
+" nnoremap <silent> h :bprevious<CR>
+"i'm an idiot for the above, switching to ctrl+b to mimic buffer switch
+
+nnoremap <c-b> <c-^>
 
 "}}}
 
