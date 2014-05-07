@@ -1,6 +1,6 @@
 "github.com/ericmanlol
 "a lot of inspiration from various other .vimrc's
-"
+
 
 "disable vi compatibility
 set nocompatible
@@ -445,8 +445,8 @@ nnoremap <Leader>cd :cd %:p:h<cr>:pwd<cr>
 "===============================================================================
 
 " Bash like keys for the command line. These resemble personal zsh mappings
-cnoremap <c-a> <home>
-cnoremap <c-e> <end>
+"cnoremap <c-a> <home>
+"cnoremap <c-e> <end>
 
 
 "godly toggling of comments
