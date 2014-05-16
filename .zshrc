@@ -235,7 +235,8 @@ alias gp='git push'
 alias gpom='git push origin master'
 alias gpu='git push -u'
 
-alias gst='git status -sb'
+# alias gst='git status -sb'
+alias gst='git status'
 alias gs='git status'
 alias gsa='git stash apply'
 alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh

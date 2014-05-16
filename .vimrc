@@ -993,6 +993,8 @@ let g:pymode_trim_whitespaces = 1
 let g:pymode_virtualenv = 1
 let g:pymode_virtualenv_path = $VIRTUAL_ENV
 
+let g:pymode_rope = 0 "disable rope temporarily
+
 "autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
 
 " for vim-autopep8
@@ -1059,7 +1061,7 @@ endfunction
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
+" inoremap <expr>(  neocomplcache#close_popup() . "("))
 
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplcache#undo_completion()
