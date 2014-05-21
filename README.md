@@ -73,6 +73,20 @@ $dotfiles --sync
 
 6.  Fin.
 
+PRE-REQUISITES / LE DEPENDENCIES (work in progress)
+---
+1. autopep8
+2. vim(~7.4-ish) compiled with python enabled
+    -   You can reference the included build-script located over: [here](https://github.com/ericmanlol/dotfiles/blob/master/buildvim.sh)
+    
+    -   otherwise your own flavor of something sane like this:
+```
+./configure --prefix=/usr/local/bin --with-features=huge --with-compiledby="woo" --enable-multibyte \ 
+--enable-gui=gtk2 --enable-rubyinterp --enable-pythoninterp --enable-python3interp --enable-luainterp 
+```
+
+    
+
 
 VIM
 ---
