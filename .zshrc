@@ -230,7 +230,7 @@ alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbv='git branch -v'
-
+alias gru='git remote update'
 alias gp='git push'
 alias gpom='git push origin master'
 alias gpu='git push -u'
