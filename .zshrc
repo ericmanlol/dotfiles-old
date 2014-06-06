@@ -13,11 +13,6 @@ compinit
 #double tizab for menu select
 zstyle ':completion:*' menu select
 
-#bindkey to ncurses app
-#ncmpcppShow() { BUFFER="ncmpcpp"; zle accept-line; }
-#zle -N ncmpcppShow
-#bindkey '^[\' ncmpcppShow
-
 #history 
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
@@ -26,12 +21,6 @@ zstyle ':completion:*' menu select
 # Path to my oh-my-zsh fork
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-
-# ZSH_THEME="pure"
 ZSH_THEME="woo"
 
 
