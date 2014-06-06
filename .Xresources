@@ -99,7 +99,7 @@ URxvt.iso14755_52: false
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
 
-!URxvt.perl-ext-common: default,clipboard,vtwheel,tabbedex
+
 URxvt.perl-ext-common: default,clipboard,vtwheel
 
 !URxvt.tabbed.tabbar-fg: 2
