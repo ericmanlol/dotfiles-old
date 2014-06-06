@@ -35,8 +35,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="woo"
 
 
-ZSH_THEME_TERM_TAB_TITLE_IDLE="%15<..<%~%<<" #15 char left truncated PWD
-ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~"
+# ZSH_THEME_TERM_TAB_TITLE_IDLE="%15<..<%~%<<" #15 char left truncated PWD
+# ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~"
 
 #List of others I enjoyed
 #ZSH_THEME="smt"
