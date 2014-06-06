@@ -530,10 +530,14 @@ nnoremap  :keepjumps normal ggVG<CR>
 
 
 "alt+h go back to previous buffer
-" nnoremap <silent> h :bprevious<CR>
-"i'm an idiot for the above, switching to ctrl+b to mimic buffer switch
+nnoremap <silent> h :bprevious<CR>
 
-nnoremap <c-b> <c-^>
+" Alt-l: Go to next buffer
+nnoremap <silent> l :bnext<CR>
+
+"was previous conflict with alt+h, but decided to sacrifice the awesomeWM
+"X keybinding which I hardly ever use anyway
+" nnoremap <C-b> <c-^>
 
 "}}}
 
