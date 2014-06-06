@@ -29,6 +29,7 @@
 .config/configstore*
 .sublime/*
 .config/menus*
+.config/powerline/*
 .config/*auto*
 .config/st3*
 .config/sublime-text*
