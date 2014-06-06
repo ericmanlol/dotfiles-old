@@ -136,12 +136,16 @@ alias ipy='ipython --profile='woo''
 
 
 #avoiding the 'screen-256color' unknown terminal type
-#=====================================================================
 alias ssh='TERM=xterm ssh'
 
 
-alias fuckitYOLO='git commit -am "DEAL WITH IT (trolling, not serious)" && git push -f origin master'
+#below was just a joke flying around facebook
+#alias fuckitYOLO='git commit -am "DEAL WITH IT (trolling, not serious)" && git push -f origin master'
 
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias sc='systemctl'
 
 
@@ -156,4 +160,6 @@ buf () {
     cp -i ${oldname} ${newname}; 
     fi 
 }
+
+
 
