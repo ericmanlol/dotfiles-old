@@ -135,7 +135,8 @@ hi () { history | grep -i $1 }
 ## jobs
 setopt long_list_jobs
 
-
+##interactive comments
+setopt interactivecomments # pound sign in interactive prompt
 
 
 # extract function
