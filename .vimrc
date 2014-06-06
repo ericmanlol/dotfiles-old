@@ -122,7 +122,7 @@ NeoBundle 'bling/vim-airline' " So much faster than Powerline! :)
 "}}}
 
 "color themes
-NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+" NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'w0ng/vim-hybrid'
 
@@ -178,6 +178,8 @@ set number
 set textwidth=80
 set wrap
 set whichwrap+=h,l,<,>,[,]
+
+
 
 
 "testing a +1 cc
@@ -424,6 +426,8 @@ nnoremap <Leader>w :bdelete<cr>
 " output
 vnoremap <silent> <Leader>0 :!python<cr>
 
+" <Leader>o: only
+nnoremap <Leader>o :only<cr>
 
 " <Leader>p: Copy the full path of the current file to the clipboard
 nnoremap <silent> <Leader>p :let @+=expand("%:p")<cr>:echo "Copied current file
