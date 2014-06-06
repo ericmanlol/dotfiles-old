@@ -1,0 +1,34 @@
+# GIT ALIASES
+#=====================================================================
+alias g=git
+alias ga='git add'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbv='git branch -v'
+alias gru='git remote update'
+alias gp='git push'
+alias gpom='git push origin master'
+alias gpu='git push -u'
+
+# alias gst='git status -sb'
+alias gst='git status'
+alias gs='git status'
+alias gsa='git stash apply'
+alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git
+refresh
+alias gd='git diff | $GIT_EDITOR -'
+alias gmv='git mv'
+alias gho='$(git remote -v 2> /dev/null | grep github | sed -e
+"s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":"
+"/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
+
+#commits gc(x);
+alias gcm='git commit -m'
+alias gc='git commit -v'
+
+# git log color hotness
+git config --global alias.lg "log --color --graph
+--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold
+blue)<%an>%Creset' --abbrev-commit"
+
+

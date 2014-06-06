@@ -86,8 +86,7 @@ source $ZSH/oh-my-zsh.sh
 source /home/woo/.nvm/nvm.sh
 
 #source /home/woo/.rvm/scripts/rvm
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 #
 
 # If not running interactively, do not do anything
