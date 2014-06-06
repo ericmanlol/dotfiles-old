@@ -10,7 +10,7 @@
     background_image = None
     icon_bell = False
     show_titlebar = False
-    font = Dina 14
+    font = Terminus (TTF) Medium 13
     scrollback_infinite = True
 [layouts]
   [[default]]

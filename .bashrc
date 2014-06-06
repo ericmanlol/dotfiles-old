@@ -2,8 +2,14 @@
 # ~/.bashrc
 #
 
+
+
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+#dem dotfiles bins
+# [[ -d $HOME/.bin ]] && export PATH=$PATH:$HOME/.bin
 
 # alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '

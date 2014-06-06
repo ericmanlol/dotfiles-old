@@ -47,6 +47,10 @@ ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~"
 #ZSH_THEME="alanpeabody"
 
 
+[[ -d $HOME/.bin ]] && export PATH=$PATH:$HOME/.bin
+
+
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
