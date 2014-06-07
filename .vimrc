@@ -913,7 +913,7 @@ let g:instant_markdown_autostart = 0
 " UltiSnips {{{
 "===============================================================================
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
