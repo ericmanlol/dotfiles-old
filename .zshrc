@@ -251,7 +251,7 @@ eval "$(grunt --completion=zsh)"
 
 #general/misc aliases
 #=====================================================================
-alias ls=`ls --colot=always'`
+alias l=`ls --color=always`
 alias ls='ls --color=always'
 alias ll='ls -alh'
 alias svim='vim -u ~/.vimrc_simple'
