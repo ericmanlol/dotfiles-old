@@ -8,10 +8,8 @@ Screen Shot:
 
 Clean via 10-25-2013:
 ![ss](http://i.imgur.com/4YLs34Y.jpg)
-Dirty via 10-25-2013
-![ss](http://i.imgur.com/M6Qjnff.png)
 
-Work in Progress - 4-23-2014
+Dirty - 4-23-2014
 ![ss](http://ericman.com/s/dat_sneak_preview.png)
 
 Soon:
