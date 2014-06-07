@@ -35,7 +35,7 @@ General configs
 ---------------
 How to use?
 
-1.  Install dotfiles
+###Install dotfiles
 ```
 $pip install dotfiles
 ```
@@ -44,17 +44,17 @@ or from src:
 https://pypi.python.org/packages/source/d/dotfiles/dotfiles-0.6.0.tar.gz
 ```
 
-2.  Clone my repo
+###Clone my repo
 ``` 
 cd ~ && git clone github.com/ericmanlol/dotfiles.git
 ```
 
-3.  Open up runtime config file
+### Open up runtime config file
 ```
 vim  ~/.dotfilesrc
 ```
 
-4.  Drop this inside .dotfilesrc (be aware of PEP8):
+### Drop this inside .dotfilesrc (be aware of PEP8):
 ```python
 [dotfiles]
 repository = ~/Dotfiles
@@ -66,12 +66,12 @@ externals = {
     '.bzr.log':     '/dev/null',
     '.uml':         '/tmp'}
 ```
-5.  Sync it up!  
+###Sync it up!  
 ```
 $dotfiles --sync
 ```
 
-6.  Fin.
+###Fin.
 
 PRE-REQUISITES / LE DEPENDENCIES (work in progress)
 ---
