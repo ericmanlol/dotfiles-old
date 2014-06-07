@@ -40,7 +40,15 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export PATH="/usr/lib/cw:$PATH"
 
 export LESSOPEN="| /usr/local/bin/source-highlight-esc.sh %s"
-export LESS=' -R '
+export LESS='-R '
+export LESS_TERMCAP_me=$(printf '\e[0m')
+export LESS_TERMCAP_se=$(printf '\e[0m')
+export LESS_TERMCAP_ue=$(printf '\e[0m')
+export LESS_TERMCAP_mb=$(printf '\e[1;32m')
+export LESS_TERMCAP_md=$(printf '\e[1;34m')
+export LESS_TERMCAP_us=$(printf '\e[1;32m')
+export LESS_TERMCAP_so=$(printf '\e[1;44;1m')
+
 
 source /usr/local/bin/virtualenvwrapper.sh
 
