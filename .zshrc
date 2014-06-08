@@ -166,7 +166,6 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 #=====================================================================
 alias ssh='TERM=xterm ssh'
 
-alias fuckitYOLO='git commit -am "DEAL WITH IT (trolling, not serious)" && git push -f origin master'
 
 alias sc='systemctl'
 
