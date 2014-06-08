@@ -105,7 +105,7 @@ NeoBundle 'terryma/vim-instant-markdown' "Markdown
 " NeoBundle 'kchmck/vim-coffee-script' "CoffeeScript
 NeoBundle 'Chiel92/vim-autoformat'
 " NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tsaleh/vim-matchit'
+
 
 "}}}
 
@@ -342,9 +342,6 @@ set magic
 
 "show incomplete commands
 set showcmd
-
-" Column width indicator
-set colorcolumn=+1
 
 
 autocmd MyAutoCmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc
@@ -972,9 +969,6 @@ let g:UltiSnipsListSnippets="<c-e>"
 
 " Python {{{
 "===============================================================================
-" let g:pymode_indent = 0
-
-"let g:pymode_lint = 0
 
 "python-mode configs to play nicely
 "===
@@ -1009,7 +1003,9 @@ let g:pymode_rope = 0 "disable rope temporarily
 "autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
 
 " for vim-autopep8
+" autopep8 is mapped to <F8> using tell-k's branch
 "let g:autopep8_disable_show_diff=1
+
 let g:autopep8_ignore="E309"
 let g:autopep8_max_line_length=79
 "}}}
@@ -1103,6 +1099,7 @@ if !exists('g:neocomplete#keyword_patterns')
 " neocomplcache {{{
 
 " ===============================================================================
+"tmp disabled in favor of neocomplete 
 
 " let g:acp_enableAtStartup = 0
 " let g:neocomplcache_enable_at_startup = 1
@@ -1134,6 +1131,8 @@ if !exists('g:neocomplete#keyword_patterns')
 "testing {{{
 
 "===============================================================================
+"working for autoclosing, but am currently restructuring so leaving this hear
+"for now -6/8/2014
 let g:AutoClosePairs = "() {} \""
 
 
