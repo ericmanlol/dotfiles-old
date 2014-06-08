@@ -118,18 +118,18 @@ NeoBundle "tpope/vim-fugitive"
 " Status line {{{
 "============================================================================
 NeoBundle 'bling/vim-airline' " So much faster than Powerline! :)
-"NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 "}}}
 
 "color themes
-" NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'w0ng/vim-hybrid'
 
 " Tags
 " NeoBundle 'xolox/vim-easytags'
 NeoBundle 'majutsushi/tagbar'
+
+
 
 "misc
 NeoBundle 'kana/vim-submode'
@@ -326,7 +326,7 @@ set wildignore+=vendor/cache/**
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.png,*.jpg,*.jpeg,*.gif
 set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
 set wildignore+=*/.nx/**,*.app
 
@@ -343,6 +343,8 @@ set magic
 "show incomplete commands
 set showcmd
 
+"colorcolumn coming back lol
+set colorcolumn=+1
 
 autocmd MyAutoCmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc
       \ so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
@@ -517,6 +519,17 @@ map J <Plug>(expand_region_shrink)
 " fFtT, : repeats it backward, and , is the leader
 "this is disabled and removed because I almost owned myself hard
 
+" Z: Bufsurf back
+nnoremap <silent> Z :BufSurfBack<CR>
+
+" X: Bufsurf forward
+nnoremap <silent> X :BufSurfForward<CR>
+
+
+
+" +/-: Increment number
+nnoremap + <c-a>
+nnoremap - <c-x>
 
 "}}}
 
