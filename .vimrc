@@ -370,6 +370,17 @@ endif
 "}}}
 
 
+"Snippets Variables {{{
+
+let g:snips_author='Eric Man'
+let g:author='Eric Man'
+let g:snips_email='ericman@ericman.com'
+let g:email='ericman@ericman.com'
+let g:snips_github='https://github.com/ericmanlol'
+let g:github='https://github.com/ericmanlol'
+
+"}}}
+
 
 "Function Key Mappings {{{
 "===============================================================================
@@ -934,9 +945,9 @@ let g:instant_markdown_autostart = 0
 " UltiSnips {{{
 "===============================================================================
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
+let g:UltiSnipsSnippetDirectories=['~/dotfiles/.vim/snips/UltiSnips/']
 
 " Make UltiSnips works nicely with YCM
 function! g:UltiSnips_Complete()
@@ -1074,6 +1085,8 @@ let delimitMate_expand_space = 0
 
 "===============================================================================
 " Use neocomplete.
+
+let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
@@ -1161,7 +1174,6 @@ let g:AutoClosePairs = "() {} \""
 
 
 "}}}
-
 
 
 
