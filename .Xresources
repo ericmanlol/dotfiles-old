@@ -1,0 +1,114 @@
+!GENERAL
+!#####################
+Xft.dpi:        96
+Xft.hinting:    1
+Xft.hintstyle:  hintslight
+Xft.rgba:       rgb
+!Xft.antialias:  false
+
+
+
+! Xresources file
+
+URXvt*depth:    32
+URxvt*.transparent: true
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt*.shading: 15
+URxvt*background: Black
+URxvt*foreground: Gray
+
+
+URxvt.font: xft:Terminess Powerline:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminess Powerline:pixelsize=16:antialias=false:hinting=false:autohint=false
+ 
+URxvt.boldFont: xft:Terminess Powerline:bold:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminess Powerline:bold:pixelsize=16:antialias=false:hinting=false:autohint=false
+
+
+
+URxvt.scrollBar: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!URxvt.keysym.C-Up:     perl:font-size:increase
+!URxvt.keysym.C-Down:   perl:font-size:decrease
+!URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+!URxvt.keysym.C-S-Down: perl:font-size:decglobal
+
+
+
+
+
+URxvt.perl-ext-common: default,osc-xterm-clipboard,vtwheel
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-u:       perl:url-select:select_next
+URxvt.keysym.M-Escape:    perl:keyboard-select:activate
+URxvt.keysym.M-s:   perl:keyboard-select:searcih
+
+!hopefully fixes ctrl+arrows, damn you tabbedex
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
+
+
+
+
+!COLORS 
+!#####################
+! Tomorrow-Night Palette
+#define t_background #1D1F21
+#define t_current_line #282A2E
+#define t_selection #373B41
+#define t_foreground #C5C8C6
+#define t_comment #707880
+#define t_red #CC6666
+#define t_orange #DE935F
+#define t_yellow #F0C674
+#define t_green #B5BD68
+#define t_aqua #8ABEB7
+#define t_blue #81A2BE
+#define t_purple #B294BB
+
+*background: t_background
+*foreground: t_foreground
+! black
+*color0: t_current_line
+*color8: t_selection
+! red
+*color1: #A54242
+*color9: t_red
+! green
+*color2: #8C9440
+*color10: t_green
+! yellow
+*color3: t_orange
+*color11: t_yellow
+! blue
+*color4: #5F819D
+*color12: t_blue
+! magenta
+*color5: #85678F
+*color13: t_purple
+! cyan
+*color6: #5E8D87
+*color14: t_aqua
+! white
+*color7: t_comment
+*color15: t_foreground
+
+
