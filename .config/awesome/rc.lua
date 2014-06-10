@@ -404,11 +404,11 @@ globalkeys = awful.util.table.join(
     -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
     awful.key({ altkey }, "p", function() os.execute("screenshot") end),
 
-    -- Tag browsing (disabled for weechat)
-    -- awful.key({ modkey }, "Left",   awful.tag.viewprev       ),
-    -- awful.key({ modkey }, "Right",  awful.tag.viewnext       ),
+    awful.key({ modkey }, "Left",   awful.tag.viewprev       ),
+    awful.key({ modkey }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey }, "Escape", awful.tag.history.restore),
 
+    -- Tag browsing (disabled for weechat)
     -- Non-empty tag browsing
     -- awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end),
     -- awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end),
