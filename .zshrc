@@ -76,10 +76,6 @@ EXTENDED_HISTORY=1
 HIST_EXPIRE_DUPS_FIRST=1
 
 
-# Grep the history with 'h'
-h () { history }
-hi () { history | grep -i $1 }
-
 
 
 ## Misc
@@ -108,8 +104,10 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/.pdevel
 #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 #export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export VIRTUALENVWRAPPER_HOOK_DIR=/home/woo/.virtualenvs
+# export VIRTUALENVWRAPPER_HOOK_DIR=/home/woo/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 # ALIASES
 #=====================================================================
@@ -123,8 +121,26 @@ alias psef='ps -ef | grep'
 alias psg='ps -ef | grep -i'
 alias nspln='netstat -plaunt'
 
+#globals
+alias -g G='| grep'
+alias -g GV='| grep -v'
+alias -g W='| wc'
+alias -g T="| tail"
+alias -g P='-- help | less'
+alias -g VZ='vim ~/.zshrc'
+alias -g DS='dotfiles --sync'
+alias -g VS='source ~/.zshrc'
+
 #python
 alias ipy='ipython --profile='woo''
+
+
+#better jobs #microeconmics (sorry bad joke)
+alias j='jobs -l'
+
+# Grep the history with 'h'
+h () { history }
+hi () { history | grep -i $1 }
 
 
 
