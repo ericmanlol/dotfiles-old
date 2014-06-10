@@ -176,7 +176,7 @@ syntax on
 set number
 
 
-set textwidth=80
+set textwidth=79
 set wrap
 set whichwrap+=h,l,<,>,[,]
 
