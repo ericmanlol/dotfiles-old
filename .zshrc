@@ -104,11 +104,11 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/.pdevel
 #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 #export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-# export VIRTUALENVWRAPPER_HOOK_DIR=/home/woo/.virtualenvs
+export VIRTUALENVWRAPPER_HOOK_DIR=/home/woo/.virtualenvs/bin
 source /usr/local/bin/virtualenvwrapper.sh
 
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
-
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 # ALIASES
 #=====================================================================
 
