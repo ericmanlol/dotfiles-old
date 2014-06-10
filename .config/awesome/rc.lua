@@ -52,7 +52,7 @@ end
 
 run_once("urxvtd")
 run_once("unclutter")
--- run_once("parcellite")
+run_once("parcellite")
 -- }}}
 
 -- {{{ Variable definitions
