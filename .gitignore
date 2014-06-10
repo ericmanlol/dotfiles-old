@@ -23,6 +23,7 @@
 .vim/bundle*
 .vim/vim-powerline*
 .vim/.*
+.bak/*
 .config/awesome-*
 .config/awesome/awesome-*
 .config/chromium*

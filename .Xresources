@@ -1,10 +1,11 @@
-!GENERAL
-!#####################
+
 Xft.dpi:        96
 Xft.hinting:    1
 Xft.hintstyle:  hintslight
 Xft.rgba:       rgb
-!Xft.antialias:  false
+Xft.antialias:  1
+! URxvt*font: xft:Terminus
+! URxvt*boldFont: xft:Terminus
 
 
 
@@ -12,14 +13,13 @@ Xft.rgba:       rgb
 
 URXvt*depth:    32
 URxvt*.transparent: true
-! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+
 URxvt*.shading: 15
 URxvt*background: Black
 URxvt*foreground: Gray
 
 
 URxvt.font: xft:Terminess Powerline:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminess Powerline:pixelsize=16:antialias=false:hinting=false:autohint=false
- 
 URxvt.boldFont: xft:Terminess Powerline:bold:pixelsize=14:antialias=false:hinting=false:autohint=false, xft:Terminess Powerline:bold:pixelsize=16:antialias=false:hinting=false:autohint=false
 
 
@@ -68,8 +68,7 @@ URxvt.keysym.Control-Right:  \033[1;5C
 
 
 
-!COLORS 
-!#####################
+!COLORS
 ! Tomorrow-Night Palette
 #define t_background #1D1F21
 #define t_current_line #282A2E
