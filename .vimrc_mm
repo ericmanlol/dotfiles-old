@@ -41,8 +41,7 @@ set showbreak=↪
 
 
 " Dictate the color of the whitespace highlighting:
-
-
+" [only one of the following two should be uncommented]
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 "highlight ExtraWhitespace ctermbg=red guibg=red
 
@@ -71,6 +70,8 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 "check for bad mappings with the following command
 ":verbose imap <BS> wll show insert-mode mapping for backspace key
 ":verbose imap <TAB> will show insert-mode mapping for tab key
+
+"}}}
 
 
 
