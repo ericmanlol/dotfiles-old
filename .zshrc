@@ -116,7 +116,8 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 alias l='ls --color=always'
 alias ls='ls --color=always'
 alias ll='ls -alh'
-alias svim='vim -u ~/ .vimrc_simple'
+alias svim='vim -u ~/.vimrc_simple'
+alias nvim='vim -u ~/.vimrc_mm'
 alias psef='ps -ef | grep'
 alias psg='ps -ef | grep -i'
 alias nspln='netstat -plaunt'
@@ -166,7 +167,8 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 
 #commits gc(x);
 alias gcm='git commit -m'
-alias gc='git commit -v'
+# alias gc='git commit -v'
+alias gc='git clone'
 
 # git log color hotness
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
