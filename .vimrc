@@ -555,10 +555,10 @@ nnoremap  :keepjumps normal ggVG<CR>
 
 
 "alt+h go back to previous buffer
-nnoremap <silent> h :bprevious<CR>
+" nnoremap <silent> h :bprevious<CR>
 
 " Alt-l: Go to next buffer
-nnoremap <silent> l :bnext<CR>
+" nnoremap <silent> l :bnext<CR>
 
 "was previous conflict with alt+h, but decided to sacrifice the awesomeWM
 "X keybinding which I hardly ever use anyway
@@ -650,13 +650,16 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ '.sass-cache',
       \ ], '\|'))
 
+call unite#custom#profile('default', 'context', {'prompt_direction' : 'top'})
+
 " Map space to the prefix for Unite
 nnoremap [unite] <Nop>
 nmap <space> [unite]
 
 " General fuzzy search
 nnoremap <silent> [unite]<space> :<C-u>Unite
-      \ -buffer-name=files buffer file_mru bookmark file_rec/async<CR>
+      \ -buffer-name=files buffer file_mru bookmark file_rec/async
+      \ -prompt-direction="top"<CR>
 
 " Quick registers
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
