@@ -552,10 +552,10 @@ nnoremap  :keepjumps normal ggVG<CR>
 
 
 "alt+h go back to previous buffer
-nnoremap <silent> h :bprevious<CR>
+" nnoremap <silent> h :bprevious<CR>
 
 " Alt-l: Go to next buffer
-nnoremap <silent> l :bnext<CR>
+" nnoremap <silent> l :bnext<CR>
 
 "was previous conflict with alt+h, but decided to sacrifice the awesomeWM
 "X keybinding which I hardly ever use anyway
