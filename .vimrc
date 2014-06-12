@@ -105,6 +105,7 @@ NeoBundle 'terryma/vim-instant-markdown' "Markdown
 " NeoBundle 'kchmck/vim-coffee-script' "CoffeeScript
 NeoBundle 'Chiel92/vim-autoformat'
 " NeoBundle 'tpope/vim-endwise'
+" NeoBundle 'vim-perl/vim-perl'
 
 
 "}}}
@@ -145,6 +146,8 @@ NeoBundle 'ton/vim-bufsurf'
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'vim-scripts/matchit.zip'
+
 let g:indentLine_color_term = 239
 
 
