@@ -647,13 +647,16 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ '.sass-cache',
       \ ], '\|'))
 
+call unite#custom#profile('default', 'context', {'prompt_direction' : 'top'})
+
 " Map space to the prefix for Unite
 nnoremap [unite] <Nop>
 nmap <space> [unite]
 
 " General fuzzy search
 nnoremap <silent> [unite]<space> :<C-u>Unite
-      \ -buffer-name=files buffer file_mru bookmark file_rec/async<CR>
+      \ -buffer-name=files buffer file_mru bookmark file_rec/async
+      \ -prompt-direction="top"<CR>
 
 " Quick registers
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
