@@ -982,7 +982,8 @@ endfunction
 
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsListSnippets="<c-e>"
-let g:UltiSnipsSnippetsDir="~/.vim/bundle/woo-snippets/"
+let g:UltiSnipsSnippetsDir="~/.vim/woo-snippets/"
+let g:UltiSnipsSnippetDirectories=["woo-snippets", "UltiSnips"]
 "}}}
 
 " YCM {{{
@@ -1178,7 +1179,7 @@ if !exists('g:neocomplete#keyword_patterns')
 " }}}
 
 
-"testing {{{
+" pair closing {{{
 
 "===============================================================================
 "working for autoclosing, but am currently restructuring so leaving this hear
@@ -1189,4 +1190,12 @@ let g:AutoClosePairs = "() {} \""
 "}}}
 
 
+" testing {{{
 
+"===============================================================================
+" For all plugins/mods in test
+
+
+
+
+"}}}
