@@ -43,6 +43,7 @@ plugins=(git zsh-syntax-highlighting)
 ##envs/jails
 source $ZSH/oh-my-zsh.sh
 source /home/woo/.nvm/nvm.sh
+source ~/perl5/perlbrew/etc/bashrc
 
 #source /home/woo/.rvm/scripts/rvm
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -288,3 +289,16 @@ chpwd() {
 # }}}
 
 
+
+PATH="/home/woo/perl5/bin${PATH+:}$PATH"; export PATH;
+PERL5LIB="/home/woo/perl5/lib/perl5${PERL5LIB+:}$PERL5LIB"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/woo/perl5${PERL_LOCAL_LIB_ROOT+:}$PERL_LOCAL_LIB_ROOT"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/woo/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/woo/perl5"; export PERL_MM_OPT;
+
+
+
+
+# golang
+#=====================================================================
+ export PATH=$PATH:/usr/local/go/bin
