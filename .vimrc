@@ -105,7 +105,7 @@ NeoBundle 'terryma/vim-instant-markdown' "Markdown
 " NeoBundle 'kchmck/vim-coffee-script' "CoffeeScript
 NeoBundle 'Chiel92/vim-autoformat'
 " NeoBundle 'tpope/vim-endwise'
-" NeoBundle 'vim-perl/vim-perl'
+NeoBundle 'vim-perl/vim-perl'
 
 
 "}}}
@@ -147,6 +147,11 @@ NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-scripts/matchit.zip'
+
+
+"Ansible
+NeoBundle 'chase/vim-ansible-yaml'
+
 
 let g:indentLine_color_term = 239
 
@@ -439,6 +444,8 @@ nnoremap <Leader>w :bdelete<cr>
 " <Leader>0: Run the visually selected code in python and replace it with the
 " output
 vnoremap <silent> <Leader>0 :!python<cr>
+
+nnoremap <Leader>0 :! perl %<cr>
 
 " <Leader>o: only
 nnoremap <Leader>o :only<cr>
@@ -975,7 +982,7 @@ endfunction
 
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsListSnippets="<c-e>"
-
+let g:UltiSnipsSnippetsDir="~/.vim/bundle/woo-snippets/"
 "}}}
 
 " YCM {{{

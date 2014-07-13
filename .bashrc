@@ -176,4 +176,9 @@ buf () {
 }
 
 
+case "$TERM" in
+  screen)
+    PROMPT_COMMAND='echo -ne "\033k$hostname\033\\"'
+    ;;
+esac
 
