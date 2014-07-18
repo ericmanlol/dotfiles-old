@@ -1190,6 +1190,19 @@ let g:AutoClosePairs = "() {} \""
 "}}}
 
 
+" web syntax {{{
+
+"===============================================================================
+" nginx
+" http://www.vim.org/scripts/download_script.php?src_id=19394
+
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/math/platform-server-configs/* if &ft == '' | setfiletype nginx | endif 
+
+
+
+"}}}
+
+
 " testing {{{
 
 "===============================================================================
@@ -1199,3 +1212,4 @@ let g:AutoClosePairs = "() {} \""
 
 
 "}}}
+
