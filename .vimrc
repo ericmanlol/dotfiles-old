@@ -166,6 +166,17 @@ NeoBundle 'tell-k/vim-autopep8'
 
 
 
+" Go {{{
+
+"===============================================================================
+" 
+NeoBundle 'fatih/vim-go'
+
+
+
+
+"}}}
+
 filetype plugin indent on
 syntax enable
 
