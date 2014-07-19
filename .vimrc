@@ -166,17 +166,6 @@ NeoBundle 'tell-k/vim-autopep8'
 
 
 
-" Go {{{
-
-"===============================================================================
-" 
-NeoBundle 'fatih/vim-go'
-
-
-
-
-"}}}
-
 filetype plugin indent on
 syntax enable
 
@@ -1220,7 +1209,10 @@ au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/math/platform-server
 " For all plugins/mods in test
 
 
+" go-lang syntax
+NeoBundle 'fatih/vim-go'
 
+let g:go_disable_autoinstall = 1
 
 "}}}
 
