@@ -182,3 +182,4 @@ case "$TERM" in
     ;;
 esac
 
+xmodmap ~/.Xmodmap
