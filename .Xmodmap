@@ -1,6 +1,9 @@
-!remove Lock=Caps_Lock
-!keysym Escape=Caps_Lock
-!keysym Caps_Lock=Escape
-!add Lock=Caps_Lock
-clear Mod4
-add Mod4 = Super_L
+! Swap Caps_Lock and Control_L
+
+keycode 66 = Control_L
+clear Lock
+add Control = Control_L
+keycode 117 = Caps_Lock
+add Lock = Caps_Lock
+! clear Mod4
+! add Mod4 = Super_L
