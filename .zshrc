@@ -113,6 +113,9 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 # ALIASES
 #=====================================================================
 
+#work
+alias mm='source /math/.mathrc'
+
 #general
 alias l='ls --color=always'
 alias ls='ls --color=always'
