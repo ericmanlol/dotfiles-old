@@ -158,7 +158,12 @@ alias gbv='git branch -v'
 alias gru='git remote update'
 alias gp='git push'
 alias gpo='git put origin'
+
+# @TODO add failsafe for this so I don't get yelled at when I get 
+# reckless, some combo with grep to check my repo
+#
 # alias gpom='git push origin master'
+
 alias gpu='git push -u'
 
 # alias gst='git status -sb'
