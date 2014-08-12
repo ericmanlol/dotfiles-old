@@ -157,22 +157,39 @@ alias gba='git branch -a'
 alias gbv='git branch -v'
 alias gru='git remote update'
 alias gp='git push'
-alias gpom='git push origin master'
+alias gpo='git put origin'
+# alias gpom='git push origin master'
 alias gpu='git push -u'
 
 # alias gst='git status -sb'
 alias gst='git status'
 alias gs='git status'
 alias gsa='git stash apply'
-alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
+# alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
 alias gd='git diff | $GIT_EDITOR -'
 alias gmv='git mv'
 alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
 
 #commits gc(x);
 alias gcm='git commit -m'
-# alias gc='git commit -v'
-alias gc='git clone'
+
+alias grrr='git reset --hard upstream/master'
+alias gc='git config -l'
+
+
+alias gras=' git remote add upstream'
+
+
+#@TODO
+ # 9022  git rebase -i upstream/master-3
+ # 9023  git rebase -i HEAD~3
+ # 9031  git rebase --continue
+ # 9032  git rebase --abort
+ # 9037  git rebase -i master
+ # 9242  git rebase master
+ # 9279  git rebase upstream/master
+
+
 
 # git log color hotness
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
