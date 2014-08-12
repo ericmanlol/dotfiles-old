@@ -152,6 +152,8 @@ hi () { history | grep -i $1 }
 #git
 alias g=git
 alias ga='git add'
+alias gaa='git add -A .'
+
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbv='git branch -v'
@@ -160,7 +162,7 @@ alias gp='git push'
 alias gpo='git put origin'
 
 # @TODO add failsafe for this so I don't get yelled at when I get 
-# reckless, some combo with grep to check my repo
+# reckless, some combo with grv(git remote -v) / grep 
 #
 # alias gpom='git push origin master'
 
