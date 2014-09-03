@@ -53,45 +53,45 @@ export LESS_TERMCAP_so=$(printf '\e[1;44;1m')
 source /usr/local/bin/virtualenvwrapper.sh
 
 
-# extract function
-extract() {
-  if [[ -f $1 ]]; then
-case $1 in
-      *.7z) 7z x $1;;
-      *.bz2) bunzip2 $1;;
-      *.gz) gunzip $1;;
-      *.rar) unrar x $1;;
-      *.tar) tar xvf $1;;
-      *.tar.bz2) tar xvjf $1;;
-      *.tar.gz) tar xvzf $1;;
-      *.tbz2) tar xvjf $1;;
-      *.tgz) tar xvzf $1;;
-      *.zip) unzip $1;;
-      *.Z) uncompress $1;;
-      *) echo "unable to extract '$1'..." ;;
-    esac
-else
-echo "'$1' is not a valid file!"
-  fi  
-}
+## extract function
+# extract() {
+  # if [[ -f $1 ]]; then
+# case $1 in
+      # *.7z) 7z x $1;;
+      # *.bz2) bunzip2 $1;;
+      # *.gz) gunzip $1;;
+      # *.rar) unrar x $1;;
+      # *.tar) tar xvf $1;;
+      # *.tar.bz2) tar xvjf $1;;
+      # *.tar.gz) tar xvzf $1;;
+      # *.tbz2) tar xvjf $1;;
+      # *.tgz) tar xvzf $1;;
+      # *.zip) unzip $1;;
+      # *.Z) uncompress $1;;
+      # *) echo "unable to extract '$1'..." ;;
+    # esac
+# else
+# echo "'$1' is not a valid file!"
+  # fi  
+# }
 
 
-#backup function
-bak () 
-{ 
-cp $1 ${1}-`date +%Y%m%d%H%M`.BAK ;
-}
-
-
-
+# #backup function
+# bak () 
+# { 
+# cp $1 ${1}-`date +%Y%m%d%H%M`.BAK ;
+# }
 
 
 
-shopt -s histappend
-export PROMPT_COMMAND='history -a' 
 
-alias tmux='tmux -2'
-alias src='source ~/.bashrc'
+
+
+# shopt -s histappend
+# export PROMPT_COMMAND='history -a' 
+
+# alias tmux='tmux -2'
+# alias src='source ~/.bashrc'
 #export TERM=xterm
 export TERM="xterm-256color"
 
@@ -99,30 +99,30 @@ export TERM="xterm-256color"
 
 # GIT ALIASES
 #=====================================================================
-alias g=git
-alias ga='git add'
-alias gb='git branch'
-alias gba='git branch -a'
-alias gbv='git branch -v'
+# alias g=git
+# alias ga='git add'
+# alias gb='git branch'
+# alias gba='git branch -a'
+# alias gbv='git branch -v'
 
-alias gp='git push'
-alias gpom='git push origin master'
-alias gpu='git push -u'
+# alias gp='git push'
+# alias gpom='git push origin master'
+# alias gpu='git push -u'
 
-alias gst='git status -sb'
-alias gs='git status'
-alias gsa='git stash apply'
-alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
-alias gd='git diff | $GIT_EDITOR -'
-alias gmv='git mv'
-alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
+# alias gst='git status -sb'
+# alias gs='git status'
+# alias gsa='git stash apply'
+# alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
+# alias gd='git diff | $GIT_EDITOR -'
+# alias gmv='git mv'
+# alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
 
-#commits gc(x);
-alias gcm='git commit -m'
-alias gc='git commit -v'
+# #commits gc(x);
+# alias gcm='git commit -m'
+# alias gc='git commit -v'
 
-# git log color hotness
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+# # git log color hotness
+# git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
 
 
