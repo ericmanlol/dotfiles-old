@@ -164,7 +164,8 @@ NeoBundle 'hynek/vim-python-pep8-indent.git'
 "pip install autopep8 
 NeoBundle 'tell-k/vim-autopep8' 
 
-
+"golang
+NeoBundle 'fatih/vim-go'
 
 filetype plugin indent on
 syntax enable
@@ -259,12 +260,12 @@ set nocompatible
 
 
 "colorscheme Tomorrow-Night
-"colorscheme jellybeans
+colorscheme jellybeans
 let g:hybrid_use_Xresources = 1
 " colorscheme hybrid
 "colorscheme cottonmouse
 
-colorscheme woo
+" colorscheme woo
 
 
 " Explicitly set encoding to utf-8
@@ -1210,7 +1211,6 @@ au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,/math/platform-server
 "
 
 " go-lang syntax
-NeoBundle 'fatih/vim-go'
 
 let g:go_disable_autoinstall = 1
 
@@ -1225,10 +1225,10 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 
-"golang configs
-"===============================================================================
 
-let g:go_snippet_engine = "neosnippet"
+let g:go_snippet_engine = "UltiSnips"
+let g:go_fmt_command = "goimports"
+
 "}}}
 
 
@@ -1239,10 +1239,7 @@ let g:go_snippet_engine = "neosnippet"
 " For all plugins/mods in test
 
 
-" go-lang syntax
-NeoBundle 'fatih/vim-go'
 
-let g:go_disable_autoinstall = 1
 
 "}}}
 

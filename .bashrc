@@ -183,3 +183,8 @@ case "$TERM" in
 esac
 
 xmodmap ~/.Xmodmap
+
+
+# golang
+#=====================================================================
+[[ -s "/home/woo/.gvm/scripts/gvm" ]] && source "/home/woo/.gvm/scripts/gvm"
