@@ -232,16 +232,17 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 eval "$(grunt --completion=zsh)"
 
 #backup file
-buf () {
-    oldname=$1; 
-    if [ "$oldname" != "" ]; 
-    then datepart=$(date +%Y-%m-%d); 
-    firstpart=`echo $oldname | cut -d "." -f 1`; 
-    newname=`echo $oldname | sed s/$firstpart/$firstpart.$datepart/`; 
-    cp -i ${oldname} ${newname}; 
-    fi 
-}
+# buf () {
+    # oldname=$1; 
+    # if [ "$oldname" != "" ]; 
+    # then datepart=bak.$(date +%R); 
+    # firstpart=`echo $oldname | cut -d "." -f 1`; 
+    # newname=`echo $oldname | sed s/$firstpart/$firstpart.$datepart/`; 
+    # cp -i ${oldname} ${newname}; 
+    # fi 
+# }
 
+buf () { cp $1{,.bak.$(date +%Y%m%d_%R)}; }
 
 # Determine a directory sizes {{{
 dirsize() {
