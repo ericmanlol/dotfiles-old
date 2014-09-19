@@ -242,7 +242,7 @@ eval "$(grunt --completion=zsh)"
     # fi 
 # }
 
-buf () { cp $1{,.bak.$(date +%Y%m%d_%R)}; }
+buf () { cp $1{,.bak\.$(date +%Y%m%d_%H%M)}; }
 
 # Determine a directory sizes {{{
 dirsize() {
