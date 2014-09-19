@@ -6,4 +6,6 @@
 #[push]
 #	default = simple
 [push]
-	default = simple
+  default = simple
+[color]
+  ui = auto
