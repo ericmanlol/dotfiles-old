@@ -113,6 +113,12 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 # ALIASES
 #=====================================================================
 
+
+# alias fuck='sudo $(history -p \!\!)'
+alias fuck='sudo $(fc -ln -1)' 
+alias -g XD='xdotool key --clearmodifiers Caps_Lock '
+
+
 #work
 alias mm='source /math/.mathrc'
 
