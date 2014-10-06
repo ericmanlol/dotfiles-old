@@ -1,5 +1,5 @@
 [global_config]
-  enabled_plugins = ActivityWatch, APTURLHandler, Logger, LaunchpadBugURLHandler
+  enabled_plugins = ActivityWatch, TerminalShot, APTURLHandler, Logger, LaunchpadBugURLHandler
 [keybindings]
 [profiles]
   [[default]]
