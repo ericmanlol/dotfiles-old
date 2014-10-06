@@ -162,7 +162,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias sc='systemctl'
 
-
+qq='--extra-vars "target=archibal"'
+alias bankai='ansible-playbook -i "archibal," qq'
 
 
 buf () {
@@ -188,3 +189,5 @@ xmodmap ~/.Xmodmap
 # golang
 #=====================================================================
 [[ -s "/home/woo/.gvm/scripts/gvm" ]] && source "/home/woo/.gvm/scripts/gvm"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
