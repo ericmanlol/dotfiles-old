@@ -114,6 +114,15 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 #=====================================================================
 
 
+# alias qq='ansible-playbook -i "archibal," user.yml --extra-vars "target=archibal" '
+
+qq='--extra-vars "target=archibal"'
+
+
+alias bankai='ansible-playbook -i "localhost" qq'
+
+# alias bankai='qq='ansible-playbook -i "archibal," user.yml'
+
 # alias fuck='sudo $(history -p \!\!)'
 alias fuck='sudo $(fc -ln -1)' 
 alias -g XD='xdotool key --clearmodifiers Caps_Lock '
@@ -338,3 +347,5 @@ PERL_MM_OPT="INSTALL_BASE=/home/woo/perl5"; export PERL_MM_OPT;
 [[ -s "/home/woo/.gvm/scripts/gvm" ]] && source "/home/woo/.gvm/scripts/gvm"
 
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
