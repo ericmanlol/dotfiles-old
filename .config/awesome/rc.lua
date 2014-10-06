@@ -68,6 +68,7 @@ altkey     = "Mod1"
 --terminal   = "urxvt -e zsh -c \"tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME\"" or "xterm"
 terminal   = "urxvtc -e zsh" or "xterm"
 tmuxterm   = "urxvt -e zsh -c \"tmux -2 -q has-session && exec tmux -2 attach-session -d || exec tmux -2 new-session -n$USER -s$USER@$HOSTNAME\""
+terminator = "terminator"
 editor     = os.getenv("EDITOR") or "nano" or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -495,6 +496,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     -- tmuxterm
     awful.key({ modkey, "Shift"   }, "Return", function () awful.util.spawn(tmuxterm) end),
+    awful.key({ modkey, "Control"   }, "Return", function () awful.util.spawn(terminator) end),
     
     awful.key({ modkey, "Control" }, "r",      awesome.restart),
     awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
