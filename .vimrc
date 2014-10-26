@@ -215,7 +215,7 @@ set expandtab
 
 set backspace=indent,eol,start
 " set nosmartindent
-"set smartindent
+set smartindent
 
 
 
@@ -1055,6 +1055,10 @@ let g:pymode_rope = 0 "disable rope temporarily
 " for vim-autopep8
 " autopep8 is mapped to <F8> using tell-k's branch
 "let g:autopep8_disable_show_diff=1
+"
+
+let g:pymode_lint_ignore = "W0611,W"
+
 
 let g:autopep8_ignore="E309"
 let g:autopep8_max_line_length=79

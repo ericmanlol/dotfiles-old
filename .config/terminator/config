@@ -10,7 +10,7 @@
     background_image = None
     icon_bell = False
     show_titlebar = False
-    font = Terminus (TTF) Medium 12
+    font = Terminess Powerline 12
     scrollback_infinite = True
 [layouts]
   [[default]]
