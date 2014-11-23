@@ -42,6 +42,7 @@
 .config/dwb*
 .config/ipython*
 .config/awesome/lain
+.config/parcellite*
 ############
 
 # Packages #

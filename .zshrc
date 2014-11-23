@@ -43,7 +43,7 @@ plugins=(git zsh-syntax-highlighting)
 ##envs/jails
 source $ZSH/oh-my-zsh.sh
 source /home/woo/.nvm/nvm.sh
-source ~/perl5/perlbrew/etc/bashrc
+# source ~/perl5/perlbrew/etc/bashrc
 
 #source /home/woo/.rvm/scripts/rvm
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -113,7 +113,7 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 # ALIASES
 #=====================================================================
 
-
+alias pp='powerpill'
 # alias qq='ansible-playbook -i "archibal," user.yml --extra-vars "target=archibal" '
 
 qq='--extra-vars "target=archibal"'
@@ -349,3 +349,4 @@ PERL_MM_OPT="INSTALL_BASE=/home/woo/perl5"; export PERL_MM_OPT;
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.fresh/build/shell.sh
