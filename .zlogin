@@ -1,0 +1,1 @@
+/Users/woo/.zprezto/runcoms/zlogin

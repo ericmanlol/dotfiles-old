@@ -13,3 +13,4 @@ export PATH
 
 #[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 source /home/woo/.rvm/scripts/rvm
+[[ -s "/Users/woo/.gvm/scripts/gvm" ]] && source "/Users/woo/.gvm/scripts/gvm"

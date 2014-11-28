@@ -2,26 +2,76 @@
 "a lot of inspiration from various other .vimrc's
 
 
+
+
+"note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
+if has('nvim')
+  runtime! plugin/python_setup.vim
+  set unnamedclip
+endif
+
+function! s:source_rc(path)
+  execute 'source' fnameescape(expand('~/.vim/rc/' . a:path))
+endfunction
+
+let s:is_windows = has('win16') || has('win32') || has('win64')
+let s:is_cygwin = has('win32unix')
+let s:is_sudo = $SUDO_USER != '' && $USER !=# $SUDO_USER
+      \ && $HOME !=# expand('~'.$USER)
+      \ && $HOME ==# expand('~'.$SUDO_USER)
+
+function! IsWindows()
+  return s:is_windows
+endfunction
+
+function! IsMac()
+  return !s:is_windows && !s:is_cygwin
+      \ && (has('mac') || has('macunix') || has('gui_macvim') ||
+      \   (!executable('xdg-open') &&
+      \     system('uname') =~? '^darwin'))
+endfunction
+
+call s:source_rc('init.rc.vim')
+
+" call neobundle#rc(expand('$CACHE/neobundle'))
+call neobundle#begin(expand('$CACHE/neobundle'))
+
+if neobundle#has_cache()
+  NeoBundleLoadCache
+else
+  call s:source_rc('neobundle.rc.vim')
+  NeoBundleSaveCache
+endif
+
+if filereadable('vimrc_local.vim') ||
+      \ findfile('vimrc_local.vim', '.;') != ''
+  " Load develop version.
+  call neobundle#local(fnamemodify(
+        \ findfile('vimrc_local.vim', '.;'), ':h'))
+endif
+
+NeoBundleLocal ~/.vim/bundle
+
+" NeoBundle configurations.
+" NeoBundleDisable neocomplcache.vim
+
+call neobundle#end()
+
+filetype plugin indent on
+
+" Enable syntax color.
+syntax enable
+
+" Installation check.
+NeoBundleCheck
+
+
+
+"================
 "disable vi compatibility
 set nocompatible
-
-
-if has('vim_starting')
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
-
- call neobundle#rc(expand('~/.vim/bundle/'))
-
- " Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'Shougo/vimproc', { 'build': {
-      \   'windows': 'make -f make_mingw32.mak',
-      \   'cygwin': 'make -f make_cygwin.mak',
-      \   'mac': 'make -f make_mac.mak',
-      \   'unix': 'make -f make_unix.mak',
-      \ } }
-
 
 " Fuzzy Search {{{
 "============================================================================
