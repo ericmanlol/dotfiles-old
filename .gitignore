@@ -43,6 +43,8 @@
 .config/ipython*
 .config/awesome/lain
 old/*
+.zhistory
+*.DS_Store*
 ############
 
 # Packages #
