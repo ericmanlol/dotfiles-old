@@ -45,6 +45,7 @@
 old/*
 .zhistory
 *.DS_Store*
+*history*
 ############
 
 # Packages #
